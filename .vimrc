@@ -42,6 +42,15 @@ au FileType ruby set shiftwidth=2
 au FileType ruby set expandtab
 au FileType ruby set smartindent
 
+" YAML formatting
+au BufRead,BufNewFile *.yaml set filetype=yaml
+au FileType yaml set tabstop=2
+au FileType yaml set softtabstop=2
+au FileType yaml set shiftwidth=2
+au FileType yaml set expandtab
+au FileType yaml set smartindent
+
+
 " Coloring
 syntax enable
 colorscheme sweyla
