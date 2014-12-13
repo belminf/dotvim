@@ -7,6 +7,8 @@ set showmatch		" set show matching parenthesis
 set ignorecase		" ignore case when searching
 set smartcase		" ignore case if all lowercase
 set nocompatible	" don't care about vi no more
+set hlsearch		" highlight search
+set incsearch		" highlight as you search
 
 " When vimrc is edited, reload it
 autocmd! BufWritePost .vimrc source ~/.vimrc
