@@ -1,6 +1,6 @@
 " Belmin's .vimrc
 
-" Options
+" options
 set number		" always show line numbers
 set ruler		" always show current position
 set showmatch		" set show matching parenthesis
@@ -10,22 +10,43 @@ set nocompatible	" don't care about vi no more
 set hlsearch		" highlight search
 set incsearch		" highlight as you search
 
-" When vimrc is edited, reload it
-autocmd! BufWritePost .vimrc source ~/.vimrc
+" pre vundle
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#begin()
 
-" Pathogen
-call pathogen#infect()
-call pathogen#helptags()
+" load vundle plugins
+Plugin 'gmarik/vundle.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'townk/vim-autoclose'
+Plugin 'tpope/vim-vinegar'
+Plugin 'bling/vim-airline'
+Plugin 'scrooloose/syntastic'
+Plugin 'mhinz/vim-signify'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'valloric/matchtagalways'
+Plugin 'lokaltog/vim-easymotion'
+Plugin 'gcmt/wildfire.vim'
+Plugin 'tpope/vim-surround'
 
-" Python formatting
-au BufNewFile,BufRead *.py set filetype=python
-au FileType python set tabstop=8
-au FileType python set expandtab
-au FileType python set shiftwidth=4
-au FileType python set softtabstop=4
-au FileType python set smartindent
-au FileType python set cinwords=if,elif,else,for,while,try,except,finally,def,class
-au BufWritePre *.py normal m`:%s/\s\+$//e
+" post vundle
+call vundle#end()
+filetype on
+filetype plugin on
+
+" when vimrc is edited, reload it
+autocmd! bufwritepost .vimrc source ~/.vimrc
+
+" python formatting
+au bufnewfile,bufread *.py set filetype=python
+au filetype python set tabstop=8
+au filetype python set expandtab
+au filetype python set shiftwidth=4
+au filetype python set softtabstop=4
+au filetype python set smartindent
+au filetype python set cinwords=if,elif,else,for,while,try,except,finally,def,class
+au bufwritepre *.py normal m`:%s/\s\+$//e
 
 " Puppet formatting
 au BufRead,BufNewFile *.pp set filetype=puppet
@@ -50,28 +71,33 @@ au FileType yaml set shiftwidth=2
 au FileType yaml set expandtab
 au FileType yaml set smartindent
 
-
 " Coloring
 syntax enable
-colorscheme sweyla
+set background=dark
+colorscheme vividchalk
 
 " Buffer issues
-set hidden		" hide the buffer, don't close
-set title		" change the terminal's title
+" set hidden		" hide the buffer, don't close
+" set title		" change the terminal's title
+
+" vim-airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#bufferline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+set encoding=utf-8
+let g:Powerline_symbols = 'fancy'
+set t_Co=256
+set term=xterm-256color
+set termencoding=utf-8
 
 " Map keys
 let mapleader=","
 
 " Quit and close windows
-map zz :qa<CR>
-map <leader>c :close<CR>
 map q :bd<CR>
 
 " Turn off hl
 map <silent> \ :nohl<CR>
-
-" Tag list
-map <silent> <leader>t :TlistToggle<CR>
 
 " Nerd tree
 let NERDTreeQuitOnOpen=1
@@ -79,11 +105,14 @@ let NERDTreeShowHidden=1
 let NERDTreeMinimalUI=1
 map <silent> <leader>b :NERDTreeToggle<CR>
 
+" Wildfire
+nmap <leader>s <Plug>(wildfire-quick-select)
+
 " Buftabs
-set laststatus=2
-:let g:buftabs_in_statusline=1
-:let g:buftabs_only_basename=1
-set statusline=buffers:\%{buftabs#statusline()}%=column\ %c,\ line\ %l/%L\ %P
+" set laststatus=2
+" :let g:buftabs_in_statusline=1
+" :let g:buftabs_only_basename=1
+" set statusline=buffers:\%{buftabs#statusline()}%=column\ %c,\ line\ %l/%L\ %P
 
 " Move between buffers
 nmap <silent> <Tab><Tab> :bn<CR>
