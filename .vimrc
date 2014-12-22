@@ -9,6 +9,9 @@ set smartcase		" ignore case if all lowercase
 set nocompatible	" don't care about vi no more
 set hlsearch		" highlight search
 set incsearch		" highlight as you search
+set shiftwidth=4
+set softtabstop=4
+set smartindent
 
 " pre vundle
 filetype off
@@ -24,7 +27,10 @@ Plugin 'tpope/vim-vinegar'
 if v:version > 702
     Plugin 'bling/vim-airline'
 else
-    Plugin 'fholgado/minibufexpl.vim'
+    Plugin 'vim-scripts/buftabs'
+    :let g:buftabs_in_statusline=1
+    :let g:buftabs_only_basename=1
+    set statusline=buffers:\%{buftabs#statusline()}%=column\ %c,\ line\ %l/%L\ %P
 endif
 Plugin 'scrooloose/syntastic'
 Plugin 'terryma/vim-multiple-cursors'
@@ -80,10 +86,9 @@ set background=dark
 colorscheme vividchalk
 
 " Buffer issues
-" set hidden		" hide the buffer, don't close
+set hidden		" hide the buffer, don't close
 set title		" change the terminal's title
-set laststatus=2
-let g:bufferline_echo = 0
+set laststatus=2	" always show status line
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
@@ -117,11 +122,6 @@ map <silent> <leader>b :NERDTreeToggle<CR>
 nmap <leader>s <Plug>(wildfire-quick-select)
 
 " Buftabs
-"
-" set laststatus=2
-" :let g:buftabs_in_statusline=1
-" :let g:buftabs_only_basename=1
-" set statusline=buffers:\%{buftabs#statusline()}%=column\ %c,\ line\ %l/%L\ %P
 
 " Move between buffers
 nmap <silent> <Tab><Tab> :bn<CR>
