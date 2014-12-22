@@ -21,7 +21,11 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'townk/vim-autoclose'
 Plugin 'tpope/vim-vinegar'
-Plugin 'bling/vim-airline'
+if v:version > 702
+    Plugin 'bling/vim-airline'
+else
+    Plugin 'fholgado/minibufexpl.vim'
+endif
 Plugin 'scrooloose/syntastic'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'valloric/matchtagalways'
@@ -77,17 +81,22 @@ colorscheme vividchalk
 
 " Buffer issues
 " set hidden		" hide the buffer, don't close
-" set title		" change the terminal's title
+set title		" change the terminal's title
+set laststatus=2
+let g:bufferline_echo = 0
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#bufferline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 set encoding=utf-8
-let g:Powerline_symbols = 'fancy'
 set t_Co=256
 set term=xterm-256color
 set termencoding=utf-8
+let g:airline_right_sep = "\u25c4"
+let g:airline_right_alt_sep = "\u25c4"
+let g:airline_left_sep = "\u25ba"
+let g:airline_left_alt_sep = "\u25ba"
 
 " Map keys
 let mapleader=","
@@ -108,6 +117,7 @@ map <silent> <leader>b :NERDTreeToggle<CR>
 nmap <leader>s <Plug>(wildfire-quick-select)
 
 " Buftabs
+"
 " set laststatus=2
 " :let g:buftabs_in_statusline=1
 " :let g:buftabs_only_basename=1
