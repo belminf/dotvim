@@ -1,8 +1,7 @@
 Installing:
 -----------
 ```
-cd ~
-git clone http://github.com/belminf/dotvim.git ~/.vim
+git clone https://github.com/belminf/dotvim.git ~/.vim
 ln -s ~/.vim/vimrc ~/.vimrc
 cd ~/.vim
 git submodule init
