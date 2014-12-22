@@ -12,7 +12,7 @@ vim +PluginInstall +qall
 Add a submodule
 
 ```
-git submodule add http://github.com/gmarik/Vundle.vim bundle/vundle
+git submodule add https://github.com/gmarik/Vundle.vim bundle/vundle
 git submodule init
 ```
 
