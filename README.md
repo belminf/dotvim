@@ -1,8 +1,7 @@
 Installing:
 -----------
 ```
-cd ~
-git clone http://github.com/belminf/dotvim.git ~/.vim
+git clone https://github.com/belminf/dotvim.git ~/.vim
 ln -s ~/.vim/vimrc ~/.vimrc
 cd ~/.vim
 git submodule init
@@ -13,7 +12,7 @@ vim +PluginInstall +qall
 Add a submodule
 
 ```
-git submodule add http://github.com/gmarik/Vundle.vim bundle/vundle
+git submodule add https://github.com/gmarik/Vundle.vim bundle/vundle
 git submodule init
 ```
 
