@@ -10,7 +10,6 @@ git submodule update
 vim +PluginInstall +qall
 ```
 
-```
 Add a submodule
 
 ```
