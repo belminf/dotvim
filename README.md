@@ -2,7 +2,7 @@ Installing:
 -----------
 ```
 git clone https://github.com/belminf/dotvim.git ~/.vim
-ln -s ~/.vim/vimrc ~/.vimrc
+ln -s ~/.vim/.vimrc ~/.vimrc
 cd ~/.vim
 git submodule init
 git submodule update
