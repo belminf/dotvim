@@ -45,23 +45,24 @@ filetype on
 filetype plugin on
 
 " when vimrc is edited, reload it
-autocmd! bufwritepost .vimrc source ~/.vimrc
+autocmd! BufWritePost .vimrc source ~/.vimrc
 
 " python formatting
-au bufnewfile,bufread *.py set filetype=python
-au filetype python set tabstop=8
-au filetype python set expandtab
-au filetype python set shiftwidth=4
-au filetype python set softtabstop=4
-au filetype python set smartindent
-au filetype python set cinwords=if,elif,else,for,while,try,except,finally,def,class
-au bufwritepre *.py normal m`:%s/\s\+$//e
+au BufNewFile,BufRead *.py set filetype=python
+au FileType python set tabstop=8
+au FileType python set expandtab
+au FileType python set shiftwidth=4
+au FileType python set softtabstop=4
+au FileType python set smartindent
+au FileType python set cinwords=if,elif,else,for,while,try,except,finally,def,class
+au BufWritePre *.py normal m`:%s/\s\+$//e
 
 " Puppet formatting
 au BufRead,BufNewFile *.pp set filetype=puppet
 au FileType puppet set nowrap
 au FileType puppet set tabstop=4
 au FileType puppet set shiftwidth=4
+au FileType python set expandtab
 au FileType puppet set smartindent
 
 " XML formatting
@@ -70,6 +71,7 @@ au BufRead,BufNewFile *.php set filetype=xml
 au FileType xml set wrap
 au FileType xml set tabstop=2
 au FileType xml set shiftwidth=2
+au FileType xml set expandtab
 au FileType xml set smartindent
 
 
