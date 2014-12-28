@@ -61,6 +61,7 @@ au BufWritePre *.py normal m`:%s/\s\+$//e
 au BufRead,BufNewFile *.pp set filetype=puppet
 au FileType puppet set nowrap
 au FileType puppet set tabstop=4
+au FileType puppet set softtabstop=4
 au FileType puppet set shiftwidth=4
 au FileType python set expandtab
 au FileType puppet set smartindent
@@ -70,6 +71,7 @@ au BufRead,BufNewFile *.html set filetype=xml
 au BufRead,BufNewFile *.php set filetype=xml
 au FileType xml set wrap
 au FileType xml set tabstop=2
+au FileType xml set softtabstop=2
 au FileType xml set shiftwidth=2
 au FileType xml set expandtab
 au FileType xml set smartindent
