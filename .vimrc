@@ -19,27 +19,25 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#begin()
 
 " load vundle plugins
-if has ("Plugin")
-    Plugin 'gmarik/vundle.vim'
-    Plugin 'scrooloose/nerdtree'
-    Plugin 'scrooloose/nerdcommenter'
-    Plugin 'townk/vim-autoclose'
-    Plugin 'tpope/vim-vinegar'
-    if v:version > 702
-        Plugin 'bling/vim-airline'
-    else
-        Plugin 'vim-scripts/buftabs'
-        :let g:buftabs_in_statusline=1
-        :let g:buftabs_only_basename=1
-        set statusline=buffers:\%{buftabs#statusline()}%=column\ %c,\ line\ %l/%L\ %P
-    endif
-    Plugin 'scrooloose/syntastic'
-    Plugin 'terryma/vim-multiple-cursors'
-    Plugin 'valloric/matchtagalways'
-    Plugin 'lokaltog/vim-easymotion'
-    Plugin 'gcmt/wildfire.vim'
-    Plugin 'tpope/vim-surround'
+Plugin 'gmarik/vundle.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'townk/vim-autoclose'
+Plugin 'tpope/vim-vinegar'
+if v:version > 702
+    Plugin 'bling/vim-airline'
+else
+    Plugin 'vim-scripts/buftabs'
+    :let g:buftabs_in_statusline=1
+    :let g:buftabs_only_basename=1
+    set statusline=buffers:\%{buftabs#statusline()}%=column\ %c,\ line\ %l/%L\ %P
 endif
+Plugin 'scrooloose/syntastic'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'valloric/matchtagalways'
+Plugin 'lokaltog/vim-easymotion'
+Plugin 'gcmt/wildfire.vim'
+Plugin 'tpope/vim-surround'
 
 " post vundle
 call vundle#end()
