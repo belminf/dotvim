@@ -1,11 +1,8 @@
 Installing:
 -----------
 ```
-git clone https://github.com/belminf/dotvim.git ~/.vim
+git clone --recursive https://github.com/belminf/dotvim.git ~/.vim
 ln -s ~/.vim/.vimrc ~/.vimrc
-cd ~/.vim
-git submodule init
-git submodule update
 vim +PluginInstall +qall
 ```
 
