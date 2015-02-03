@@ -5,7 +5,7 @@ Installing:
 git clone --recursive https://github.com/belminf/dotvim.git ~/.vim
 
 # For bidirectional deployments
-git clone --recursive git@github.com:belminf/dotvim.git
+git clone --recursive git@github.com:belminf/dotvim.git ~/.vim
 
 ln -s ~/.vim/.vimrc ~/.vimrc
 vim +PluginInstall +qall
