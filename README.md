@@ -11,7 +11,8 @@ ln -s ~/.vim/.vimrc ~/.vimrc
 vim +PluginInstall +qall
 ```
 
-Add a submodule
+Add a submodule:
+----------------
 
 ```
 git submodule add https://github.com/gmarik/Vundle.vim bundle/vundle
