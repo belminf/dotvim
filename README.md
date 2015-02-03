@@ -1,15 +1,18 @@
 Installing:
 -----------
 ```
-git clone https://github.com/belminf/dotvim.git ~/.vim
+# For pull only deployments
+git clone --recursive https://github.com/belminf/dotvim.git ~/.vim
+
+# For bidirectional deployments
+git clone --recursive git@github.com:belminf/dotvim.git ~/.vim
+
 ln -s ~/.vim/.vimrc ~/.vimrc
-cd ~/.vim
-git submodule init
-git submodule update
 vim +PluginInstall +qall
 ```
 
-Add a submodule
+Add a submodule:
+----------------
 
 ```
 git submodule add https://github.com/gmarik/Vundle.vim bundle/vundle
