@@ -1,7 +1,12 @@
 Installing:
 -----------
 ```
+# For pull only deployments
 git clone --recursive https://github.com/belminf/dotvim.git ~/.vim
+
+# For bidirectional deployments
+got clone --recursive git@github.com:belminf/dotvim.git
+
 ln -s ~/.vim/.vimrc ~/.vimrc
 vim +PluginInstall +qall
 ```
