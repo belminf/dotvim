@@ -38,6 +38,8 @@ Plugin 'valloric/matchtagalways'
 Plugin 'lokaltog/vim-easymotion'
 Plugin 'gcmt/wildfire.vim'
 Plugin 'tpope/vim-surround'
+Plugin 'rodjek/vim-puppet'
+Plugin 'godlygeek/tabular'
 
 " post vundle
 call vundle#end()
