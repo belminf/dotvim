@@ -57,6 +57,7 @@ au FileType python set shiftwidth=4
 au FileType python set softtabstop=4
 au FileType python set smartindent
 au FileType python set cinwords=if,elif,else,for,while,try,except,finally,def,class
+au FileType python inoremap # .<c-h>#<space>
 au BufWritePre *.py normal m`:%s/\s\+$//e
 
 " Puppet formatting
