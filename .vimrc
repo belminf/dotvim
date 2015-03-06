@@ -68,6 +68,7 @@ au FileType puppet set softtabstop=4
 au FileType puppet set shiftwidth=4
 au FileType puppet set expandtab
 au FileType puppet set smartindent
+au FileType puppet inoremap # .<c-h>#<space>
 
 " XML formatting
 au BufRead,BufNewFile *.html set filetype=xml
