@@ -40,6 +40,7 @@ Plugin 'gcmt/wildfire.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'rodjek/vim-puppet'
 Plugin 'godlygeek/tabular'
+Plugin 'kien/ctrlp.vim'
 
 " post vundle
 call vundle#end()
