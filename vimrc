@@ -41,6 +41,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'rodjek/vim-puppet'
 Plugin 'godlygeek/tabular'
 Plugin 'kien/ctrlp.vim'
+Plugin 'xolox/vim-easytags'
 
 " post vundle
 call vundle#end()
