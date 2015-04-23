@@ -84,7 +84,6 @@ au FileType xml set shiftwidth=2
 au FileType xml set expandtab
 au FileType xml set smartindent
 
-
 " Ruby formatting
 au BufRead,BufNewFile *.rb set filetype=ruby
 au FileType ruby set tabstop=2
@@ -92,6 +91,14 @@ au FileType ruby set softtabstop=2
 au FileType ruby set shiftwidth=2
 au FileType ruby set expandtab
 au FileType ruby set smartindent
+
+" Bash formatting
+au BufRead,BufNewFile *.sh set filetype=sh
+au FileType sh set tabstop=2
+au FileType sh set softtabstop=2
+au FileType sh set shiftwidth=2
+au FileType sh set expandtab
+au FileType sh set smartindent
 
 " YAML formatting
 au BufRead,BufNewFile *.yaml set filetype=yaml
@@ -142,8 +149,6 @@ map <silent> <leader>b :NERDTreeToggle<CR>
 " Wildfire
 nmap <leader>s <Plug>(wildfire-quick-select)
 
-" Buftabs
-
 " Move between buffers
 nmap <silent> <Tab><Tab> :bn<CR>
 nmap <silent> <S-Tab><S-Tab> :bp<CR>
@@ -152,3 +157,7 @@ nmap <silent> <F1> <Nop>
 " Easy motion shortcut
 nmap <space> <Plug>(easymotion-s2)
 let g:EasyMotion_smartcase = 1
+
+" syntastic
+nmap <C-e> :lnext<CR>	" next error
+nmap <C-E> :lprev<CR>	" prev error
