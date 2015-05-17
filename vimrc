@@ -9,9 +9,23 @@ set smartcase		" ignore case if all lowercase
 set nocompatible	" don't care about vi no more
 set hlsearch		" highlight search
 set incsearch		" highlight as you search
+set backup		" keep a backup file (restore to previous version)
+set undofile		" keep an undo file (undo changes after closing)
+set history=50		" keep 50 lines of command line history
+set showcmd		" display incomplete commands
+set backspace=indent,eol,start
+
+" indent
 set shiftwidth=4
 set softtabstop=4
 set smartindent
+
+" Buffer issues
+set hidden		" hide the buffer, don't close
+set title		" change the terminal's title
+set laststatus=2	" always show status line
+
+let &titleold=getcwd()
 
 " pre vundle
 filetype off
@@ -43,7 +57,6 @@ Plugin 'godlygeek/tabular'
 Plugin 'kien/ctrlp.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
-
 
 " post vundle
 call vundle#end()
@@ -113,10 +126,6 @@ syntax enable
 set background=dark
 colorscheme vividchalk
 
-" Buffer issues
-set hidden		" hide the buffer, don't close
-set title		" change the terminal's title
-set laststatus=2	" always show status line
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
