@@ -9,11 +9,21 @@ set smartcase		" ignore case if all lowercase
 set nocompatible	" don't care about vi no more
 set hlsearch		" highlight search
 set incsearch		" highlight as you search
-set backup		" keep a backup file (restore to previous version)
-set undofile		" keep an undo file (undo changes after closing)
 set history=50		" keep 50 lines of command line history
 set showcmd		" display incomplete commands
 set backspace=indent,eol,start
+
+" vim backup
+set backupdir=~/.vim/backup
+set backup
+
+" vim undo
+set undodir=~/.vim/undo
+set undofile
+
+" vim swap
+set directory=~/.vim/swap
+
 
 " indent
 set shiftwidth=4
