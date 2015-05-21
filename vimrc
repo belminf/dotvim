@@ -180,3 +180,5 @@ let g:EasyMotion_smartcase = 1
 " syntastic
 nmap <C-e> :lnext<CR>	" next error
 nmap <C-E> :lprev<CR>	" prev error
+let g:syntastic_always_populate_loc_list=1
+nmap <silent> <C-Tab> :lnext<CR>
