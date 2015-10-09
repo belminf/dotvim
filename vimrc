@@ -163,6 +163,7 @@ map <silent> \ :nohl<CR>
 let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI=1
+let NERDTreeIgnore=['\.pyc$']
 map <silent> <leader>b :NERDTreeToggle<CR>
 
 " Wildfire
