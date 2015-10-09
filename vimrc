@@ -182,3 +182,7 @@ nmap <C-e> :lnext<CR>	" next error
 nmap <C-E> :lprev<CR>	" prev error
 let g:syntastic_always_populate_loc_list=1
 nmap <silent> <C-Tab> :lnext<CR>
+
+" CtrlP
+let g:ctrlp_cmd = 'CtrlPTag'
+let g:ctrlp_user_command = 'find %s -type f'
