@@ -134,7 +134,7 @@ au FileType yaml set smartindent
 " Coloring
 syntax enable
 set background=dark
-colorscheme vividchalk
+colorscheme vendetta
 
 
 " vim-airline
