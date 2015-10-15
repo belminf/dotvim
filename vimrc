@@ -185,5 +185,10 @@ let g:syntastic_always_populate_loc_list=1
 nmap <silent> <C-Tab> :lnext<CR>
 
 " CtrlP
-let g:ctrlp_cmd = 'CtrlPTag'
-let g:ctrlp_user_command = 'find %s -type f'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.git,*.pyc
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\.(git|hg|svn)$',
+    \ 'file': '\.(pyc)$',
+\ }
+let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_working_path_mode = 'ra'
