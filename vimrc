@@ -182,6 +182,8 @@ let g:EasyMotion_smartcase = 1
 nmap <C-e> :lnext<CR>	" next error
 nmap <C-E> :lprev<CR>	" prev error
 let g:syntastic_always_populate_loc_list=1
+let g:syntastic_python_checkers=['flake8']
+let g:syntastic_python_checker_args='--ignore=E501'
 nmap <silent> <C-Tab> :lnext<CR>
 
 " CtrlP
