@@ -85,7 +85,7 @@ au FileType python set softtabstop=4
 au FileType python set smartindent
 au FileType python set cinwords=if,elif,else,for,while,try,except,finally,def,class
 au FileType python inoremap # .<c-h>#<space>
-au BufWritePre *.py normal m`:%s/\s\+$//e
+au BufWritePre *.py :%s/\s\+$//e
 
 " Puppet formatting
 au BufRead,BufNewFile *.pp set filetype=puppet
@@ -182,8 +182,7 @@ let g:EasyMotion_smartcase = 1
 nmap <C-e> :lnext<CR>	" next error
 nmap <C-E> :lprev<CR>	" prev error
 let g:syntastic_always_populate_loc_list=1
-let g:syntastic_python_checkers=['flake8']
-let g:syntastic_python_checker_args='--ignore=E501'
+let g:syntastic_python_flake8_args='--ignore=E501,E225'
 nmap <silent> <C-Tab> :lnext<CR>
 
 " CtrlP
