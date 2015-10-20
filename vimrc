@@ -56,7 +56,6 @@ else
     set statusline=buffers:\%{buftabs#statusline()}%=column\ %c,\ line\ %l/%L\ %P
 endif
 Plugin 'scrooloose/syntastic'
-Plugin 'terryma/vim-multiple-cursors'
 Plugin 'valloric/matchtagalways'
 Plugin 'lokaltog/vim-easymotion'
 Plugin 'gcmt/wildfire.vim'
