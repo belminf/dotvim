@@ -64,7 +64,6 @@ Plugin 'rodjek/vim-puppet'
 Plugin 'godlygeek/tabular'
 Plugin 'kien/ctrlp.vim'
 Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
 Plugin 'rking/ag.vim'
 
 " post vundle
@@ -199,9 +198,11 @@ let g:ctrlp_custom_ignore = {
     \ 'dir':  '\.(git|hg|svn)$',
     \ 'file': '\.(pyc)$',
 \ }
+let g:ctrlp_map = '<NUL>'
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode = 'ra'
 
 " AG
 let g:ag_working_path_mode="r"
 nmap <leader>a :Ag<space>
+
