@@ -47,7 +47,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'townk/vim-autoclose'
-Plugin 'tpope/vim-vinegar'
 if v:version > 702
     Plugin 'bling/vim-airline'
 else
@@ -165,7 +164,7 @@ let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI=1
 let NERDTreeIgnore=['\.pyc$', '.git']
-map <silent> <leader>b :NERDTreeToggle<CR>
+map <silent> - :NERDTreeToggle<CR>
 "" When opening dir, go to NerdTree
 au StdinReadPre * let s:std_in=1
 au VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
