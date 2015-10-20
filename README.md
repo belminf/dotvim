@@ -23,6 +23,7 @@ Update:
 -------
 ```
 git pull origin master
+git submodule update
 git submodule foreach git pull origin master
 vim +PluginInstall +qall
 ```
