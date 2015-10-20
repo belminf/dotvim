@@ -172,8 +172,8 @@ au VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Nerd commentator
 let NERDCreateDefaultMappings=0
-nmap <leader>cc <Plug>NERDCommenterToggle
-xmap <leader>cc <Plug>NERDCommenterToggle
+nmap # <Plug>NERDCommenterToggle
+xmap # <Plug>NERDCommenterToggle
 
 " Wildfire
 nmap <leader>s <Plug>(wildfire-quick-select)
