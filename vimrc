@@ -166,6 +166,7 @@ let NERDTreeShowHidden=1
 let NERDTreeMinimalUI=1
 let NERDTreeIgnore=['\.pyc$', '.git']
 map <silent> <leader>b :NERDTreeToggle<CR>
+"" When opening dir, go to NerdTree
 au StdinReadPre * let s:std_in=1
 au VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
