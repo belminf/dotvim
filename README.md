@@ -15,7 +15,7 @@ Add a submodule:
 ----------------
 
 ```
-git submodule add https://github.com/gmarik/Vundle.vim bundle/vundle
+git submodule add -f git@github.com:VundleVim/Vundle.vim.git bundle/Vundle.vim
 git submodule init
 ```
 

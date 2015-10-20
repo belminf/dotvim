@@ -39,11 +39,11 @@ let &titleold=getcwd()
 
 " pre vundle
 filetype off
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " load vundle plugins
-Plugin 'gmarik/vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'townk/vim-autoclose'
@@ -70,8 +70,7 @@ Plugin 'xolox/vim-easytags'
 
 " post vundle
 call vundle#end()
-filetype on
-filetype plugin on
+filetype plugin indent on
 
 " when vimrc is edited, reload it
 autocmd! BufWritePost .vimrc source ~/.vimrc
