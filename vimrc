@@ -67,6 +67,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'kien/ctrlp.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
+Plugin 'rking/ag.vim'
 
 " post vundle
 call vundle#end()
@@ -151,6 +152,7 @@ let g:airline_left_alt_sep = "\u25ba"
 
 " Map keys
 let mapleader=","
+noremap <space> :
 
 " Quit and close windows
 map q :bd<CR>
@@ -174,7 +176,7 @@ nmap <silent> <S-Tab><S-Tab> :bp<CR>
 nmap <silent> <F1> <Nop>
 
 " Easy motion shortcut
-nmap <space> <Plug>(easymotion-s2)
+nmap . <Plug>(easymotion-s2)
 let g:EasyMotion_smartcase = 1
 
 " syntastic
@@ -192,3 +194,7 @@ let g:ctrlp_custom_ignore = {
 \ }
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode = 'ra'
+
+" AG
+let g:ag_working_path_mode="r"
+nmap <leader>a :Ag<space>
