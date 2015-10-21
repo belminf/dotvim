@@ -1,5 +1,7 @@
 Installing:
 -----------
+RHEL requirements: `yum install --enablerepo='epel' python-flake8 the_silver_searcher`
+
 ```
 # SSH key
 git clone --recursive git@github.com:belminf/dotvim.git ~/.vim
