@@ -173,16 +173,16 @@ nmap # <Plug>NERDCommenterToggle
 xmap # <Plug>NERDCommenterToggle
 
 " Wildfire
-nmap <leader>s <Plug>(wildfire-quick-select)
+nmap . <Plug>(wildfire-quick-select)
+
+" Easy motion shortcut
+nmap ` <Plug>(easymotion-s2)
+let g:EasyMotion_smartcase = 1
 
 " Move between buffers
 nmap <silent> <Tab><Tab> :bn<CR>
 nmap <silent> <S-Tab><S-Tab> :bp<CR>
 nmap <silent> <F1> <Nop>
-
-" Easy motion shortcut
-nmap . <Plug>(easymotion-s2)
-let g:EasyMotion_smartcase = 1
 
 " syntastic
 nmap <C-e> :lnext<CR>	" next error
