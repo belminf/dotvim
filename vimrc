@@ -1,6 +1,7 @@
 " Belmin's .vimrc
+" https://github.com/belminf/dotvim/
 
-" options
+" Options
 set number		" always show line numbers
 set ruler		" always show current position
 set showmatch		" set show matching parenthesis
@@ -13,7 +14,7 @@ set history=50		" keep 50 lines of command line history
 set showcmd		" display incomplete commands
 set backspace=indent,eol,start
 
-" vim backup
+" Centralized backup
 set backupdir=~/.vim/backup
 set backup
 
@@ -24,8 +25,7 @@ set undofile
 " vim swap
 set directory=~/.vim/swap
 
-
-" indent
+" Default indent
 set shiftwidth=4
 set softtabstop=4
 set smartindent
@@ -37,16 +37,17 @@ set laststatus=2	" always show status line
 
 let &titleold=getcwd()
 
-" pre vundle
+" Pre vundle
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" load vundle plugins
+" Load vundle plugins
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'townk/vim-autoclose'
+"" Addresses issue with RHEL6 and 5
 if v:version > 702
     Plugin 'bling/vim-airline'
 else
@@ -64,14 +65,14 @@ Plugin 'godlygeek/tabular'
 Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
 
-" post vundle
+" Post vundle
 call vundle#end()
 filetype plugin indent on
 
-" when vimrc is edited, reload it
+" When vimrc is edited, reload it
 autocmd! BufWritePost .vimrc source ~/.vimrc
 
-" python formatting
+" Python formatting
 au BufNewFile,BufRead *.py set filetype=python
 au FileType python set tabstop=8
 au FileType python set expandtab
@@ -131,7 +132,6 @@ syntax enable
 set background=dark
 colorscheme vendetta
 
-
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#bufferline#enabled = 1
@@ -145,50 +145,24 @@ let g:airline_right_alt_sep = "\u25c4"
 let g:airline_left_sep = "\u25ba"
 let g:airline_left_alt_sep = "\u25ba"
 
-" Map keys
-let mapleader=","
-noremap <space> :
-
-" Quit and close windows
-map q :bd<CR>
-
-" Turn off hl
-map <silent> \ :nohl<CR>
-
 " Nerd tree
 let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI=1
 let NERDTreeIgnore=['\.pyc$', '.git']
-map <silent> - :NERDTreeToggle<CR>
 "" When opening dir, go to NerdTree
 au StdinReadPre * let s:std_in=1
 au VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-
 " Nerd commentator
 let NERDCreateDefaultMappings=0
-nmap # <Plug>NERDCommenterToggle
-xmap # <Plug>NERDCommenterToggle
-
-" Wildfire
-nmap . <Plug>(wildfire-quick-select)
 
 " Easy motion shortcut
-nmap ` <Plug>(easymotion-s2)
 let g:EasyMotion_smartcase = 1
 
-" Move between buffers
-nmap <silent> <Tab><Tab> :bn<CR>
-nmap <silent> <S-Tab><S-Tab> :bp<CR>
-nmap <silent> <F1> <Nop>
-
 " syntastic
-nmap <C-e> :lnext<CR>	" next error
-nmap <C-E> :lprev<CR>	" prev error
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_python_flake8_args='--ignore=E501,E225'
-nmap <silent> <C-Tab> :lnext<CR>
 
 " CtrlP
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.git,*.pyc
@@ -196,11 +170,71 @@ let g:ctrlp_custom_ignore = {
     \ 'dir':  '\.(git|hg|svn)$',
     \ 'file': '\.(pyc)$',
 \ }
-let g:ctrlp_map = '<NUL>'
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode = 'ra'
 
 " AG
 let g:ag_working_path_mode="r"
-nmap <leader>a :Ag<space>
 
+" Toggle buffers
+function! GetBufferList()
+  redir =>buflist
+  silent! ls!
+  redir END
+  return buflist
+endfunction
+
+function! ToggleList(bufname, pfx)
+  let buflist = GetBufferList()
+  for bufnum in map(filter(split(buflist, '\n'), 'v:val =~ "'.a:bufname.'"'), 'str2nr(matchstr(v:val, "\\d\\+"))')
+    if bufwinnr(bufnum) != -1
+      exec(a:pfx.'close')
+      return
+    endif
+  endfor
+  if a:pfx == 'l' && len(getloclist(0)) == 0
+      echohl ErrorMsg
+      echo "Location List is Empty."
+      return
+  endif
+  let winnr = winnr()
+  exec(a:pfx.'open')
+  if winnr() != winnr
+    wincmd p
+  endif
+endfunction
+
+" Key mapping
+let mapleader=","
+"" Quit and close windows
+map q :bd<CR>
+"" Move buffers
+nmap <silent> <Tab><Tab> :bn<CR>
+nmap <silent> <S-Tab><S-Tab> :bp<CR>
+"" CtrlP
+let g:ctrlp_map = '<Space>'
+"" Clear highlighting
+map <silent><F3> :nohl<CR>
+"" Toggle number
+map <silent><F4> :set number!<CR>
+"" AG search
+nmap ' :Ag<space>
+"" Browse
+map <silent> - :NERDTreeToggle<CR>
+"" Selection
+nmap ` <Plug>(wildfire-quick-select)
+"" Motion
+nmap . <Plug>(easymotion-s2)
+"" Comment out a line or block
+nmap # <Plug>NERDCommenterToggle
+xmap # <Plug>NERDCommenterToggle
+"" Toggle quicklist (used for AG)
+nmap <silent> <F2> :call ToggleList("Quickfix List", 'c')<CR>
+
+" Disabled mappings
+"" Disable F1
+"nmap <silent> <F1> <Nop>
+"" Navigate errors
+"nmap <C-e> :lnext<CR>
+"nmap <C-E> :lprev<CR>
+"nmap <silent> <C-Tab> :lnext<CR>
