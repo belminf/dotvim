@@ -19,8 +19,10 @@ set backupdir=~/.vim/backup
 set backup
 
 " vim undo
-set undodir=~/.vim/undo
-set undofile
+if v:version > 702
+    set undodir=~/.vim/undo
+    set undofile
+endif
 
 " vim swap
 set directory=~/.vim/swap
