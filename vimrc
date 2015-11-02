@@ -138,17 +138,17 @@ set background=dark
 colorscheme vendetta
 
 " vim-airline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#bufferline#enabled = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline_right_sep = "\u25c4"
-let g:airline_right_alt_sep = "\u25c4"
-let g:airline_left_sep = "\u25ba"
-let g:airline_left_alt_sep = "\u25ba"
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#bufferline#enabled=1
+let g:airline#extensions#tabline#buffer_nr_show=1
+let g:airline_right_sep="\u25c4"
+let g:airline_right_alt_sep="\u25c4"
+let g:airline_left_sep="\u25ba"
+let g:airline_left_alt_sep="\u25ba"
 
 " Nerd tree
 let NERDTreeQuitOnOpen=1
-let NERDTreeShowHidden=1
+let NERDTreeShowHidden =1
 let NERDTreeMinimalUI=1
 let NERDTreeIgnore=['\.pyc$', '.git']
 "" When opening dir, go to NerdTree
@@ -159,7 +159,7 @@ au VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 let NERDCreateDefaultMappings=0
 
 " Easy motion shortcut
-let g:EasyMotion_smartcase = 1
+let g:EasyMotion_smartcase=1
 
 " syntastic
 let g:syntastic_always_populate_loc_list=1
@@ -167,15 +167,15 @@ let g:syntastic_python_flake8_args='--ignore=E501,E225'
 
 " CtrlP
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.git,*.pyc
-let g:ctrlp_custom_ignore = {
+let g:ctrlp_custom_ignore={
     \ 'dir':  '\.(git|hg|svn)$',
     \ 'file': '\.(pyc)$',
 \ }
-let g:ctrlp_cmd = 'CtrlPMixed'
-let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_cmd='CtrlPMixed'
+let g:ctrlp_working_path_mode='ra'
 
 " AG
-let g:ag_working_path_mode="r"
+let g:ag_working_path_mode ="r"
 
 " Toggle buffers
 function! GetBufferList()
@@ -186,7 +186,7 @@ function! GetBufferList()
 endfunction
 
 function! ToggleList(bufname, pfx)
-  let buflist = GetBufferList()
+  let buflist=GetBufferList()
   for bufnum in map(filter(split(buflist, '\n'), 'v:val =~ "'.a:bufname.'"'), 'str2nr(matchstr(v:val, "\\d\\+"))')
     if bufwinnr(bufnum) != -1
       exec(a:pfx.'close')
@@ -198,7 +198,7 @@ function! ToggleList(bufname, pfx)
       echo "Location List is Empty."
       return
   endif
-  let winnr = winnr()
+  let winnr=winnr()
   exec(a:pfx.'open')
   if winnr() != winnr
     wincmd p
@@ -213,7 +213,7 @@ map q :bd<CR>
 nmap <silent> <Tab><Tab> :bn<CR>
 nmap <silent> <S-Tab><S-Tab> :bp<CR>
 "" CtrlP
-let g:ctrlp_map = '<Space>'
+let g:ctrlp_map='<Space>'
 "" Clear highlighting
 map <silent><F3> :nohl<CR>
 "" Toggle number
