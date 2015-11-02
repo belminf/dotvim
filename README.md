@@ -10,6 +10,7 @@ git clone --recursive git@github.com:belminf/dotvim.git ~/.vim
 git clone --recursive https://github.com/belminf/dotvim.git ~/.vim
 
 # Link vimrc and install plugins
+mv ~/.vimrc ~/.vimrc.original
 ln -s ~/.vim/vimrc ~/.vimrc
 vim +PluginInstall +qall
 ```
