@@ -13,6 +13,11 @@ set incsearch		" highlight as you search
 set history=50		" keep 50 lines of command line history
 set showcmd		" display incomplete commands
 set backspace=indent,eol,start
+scriptencoding utf-8
+set encoding=utf-8
+set t_Co=256
+set term=xterm-256color
+set termencoding=utf-8
 
 " Centralized backup
 set backupdir=~/.vim/backup
@@ -54,9 +59,7 @@ if v:version > 702
     Plugin 'bling/vim-airline'
 else
     Plugin 'vim-scripts/buftabs'
-    :let g:buftabs_in_statusline=1
     :let g:buftabs_only_basename=1
-    set statusline=buffers:\%{buftabs#statusline()}%=column\ %c,\ line\ %l/%L\ %P
 endif
 Plugin 'scrooloose/syntastic'
 Plugin 'valloric/matchtagalways'
@@ -138,10 +141,6 @@ colorscheme vendetta
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#bufferline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
-set encoding=utf-8
-set t_Co=256
-set term=xterm-256color
-set termencoding=utf-8
 let g:airline_right_sep = "\u25c4"
 let g:airline_right_alt_sep = "\u25c4"
 let g:airline_left_sep = "\u25ba"
