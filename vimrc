@@ -133,6 +133,15 @@ au FileType yaml set shiftwidth=2
 au FileType yaml set expandtab
 au FileType yaml set smartindent
 
+" Markdown formatting
+au BufRead,BufNewFile *.md set filetype=markdown
+au FileType markdown set tabstop=2
+au FileType markdown set softtabstop=2
+au FileType markdown set shiftwidth=2
+au FileType markdown set expandtab
+au FileType markdown set smartindent
+au Filetype markdown set spell spelllang=en_us
+
 " Coloring
 syntax enable
 set background=dark
