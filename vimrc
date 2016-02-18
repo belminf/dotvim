@@ -70,6 +70,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'pearofducks/ansible-vim'
 
 " Post vundle
 call vundle#end()
