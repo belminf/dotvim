@@ -4,11 +4,8 @@ RHEL requirements: `yum install --enablerepo='epel' -y python-flake8 the_silver_
 
 Ubuntu requirements: `apt-get install -y vim python-flake8 silversearcher-ag`
 ```
-# SSH key
+# Clone
 git clone --recursive git@github.com:belminf/dotvim.git ~/.vim
-
-# HTTP
-git clone --recursive https://github.com/belminf/dotvim.git ~/.vim
 
 # Link vimrc and install plugins
 mv ~/.vimrc ~/.vimrc.original
