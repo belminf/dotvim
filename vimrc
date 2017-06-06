@@ -146,7 +146,7 @@ au Filetype markdown set spell spelllang=en_us
 " Coloring
 syntax enable
 set background=dark
-colorscheme vendetta
+colorscheme atom-dark-256
 
 " vim-airline
 let g:airline#extensions#tabline#enabled=1
