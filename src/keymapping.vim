@@ -4,7 +4,7 @@ let mapleader=","
 nmap <silent> <Tab><Tab> :bn<CR>
 nmap <silent> <S-Tab><S-Tab> :bp<CR>
 "" CtrlP
-let g:ctrlp_map='<Space>'
+map <silent><Space> :CtrlP<CR>
 "" Clear highlighting
 map <silent><F3> :nohl<CR>
 "" Toggle number

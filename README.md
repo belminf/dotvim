@@ -9,28 +9,19 @@ Python requirements: `pip install flake8`
 
 ```
 # Clone
-git clone --recursive git@github.com:belminf/dotvim.git ~/.vim
+git clone git@github.com:belminf/dotvim.git ~/.vim
 
 # Link vimrc and install plugins
 mv ~/.vimrc ~/.vimrc.original
 ln -s ~/.vim/rc.vim ~/.vimrc
-vim +PluginInstall +qall
-```
-
-Add a submodule:
-----------------
-```
-git submodule add -f git@github.com:VundleVim/Vundle.vim.git bundle/Vundle.vim
-git submodule init
+vim +PlugInstall +qall
 ```
 
 Update:
 -------
 ```
 git pull origin master
-git submodule init
-git submodule update
-vim +PluginInstall +qall
+vim +PlugUpdate +qall
 ```
 
 Keys:
