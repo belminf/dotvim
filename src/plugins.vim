@@ -13,6 +13,8 @@ let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden =1
 let NERDTreeMinimalUI=1
 let NERDTreeIgnore=['\.pyc$', '.git']
+au BufEnter NERD_tree_* map <silent> <Esc> :NERDTreeToggle<CR>
+au BufLeave NERD_tree_* unmap <Esc>
 
 " Nerdcommenter: quick commenting
 Plug 'scrooloose/nerdcommenter'
