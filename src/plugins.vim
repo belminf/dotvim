@@ -72,8 +72,11 @@ let g:ctrlp_cmd='CtrlPMixed'
 let g:ctrlp_working_path_mode='ra'
 
 " ag: searching
-Plug 'rking/ag.vim'
+Plug 'mileszs/ack.vim'
 let g:ag_working_path_mode ="r"
+if executable('ag')
+    let g:ackprg = 'ag --vimgrep --smart-case'
+endif
 
 " vim-gitgutter: add git status in gutter
 Plug 'airblade/vim-gitgutter'

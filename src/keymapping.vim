@@ -10,7 +10,7 @@ map <silent><F3> :nohl<CR>
 "" Toggle number
 map <silent><F4> :set number!<CR>
 "" AG search
-nmap ' :Ag<space>
+nmap ' :Ack<Space>
 "" Browse
 map <silent> - :NERDTreeToggle<CR>
 "" Selection
