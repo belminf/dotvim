@@ -5,16 +5,16 @@
 autocmd! BufWritePost ~/.vim/*.vim source ~/.vimrc
 
 " Options
-source src/options.vim
+source ~/.vim/src/options.vim
 
 " Plugins
-source src/plugins.vim
+source ~/.vim/src/plugins.vim
 
 " File types
-source src/filetypes.vim
+source ~/.vim/src/filetypes.vim
 
 " Colors
-source src/colors.vim
+source ~/.vim/src/colors.vim
 
 " Keymapping
-source src/keymapping.vim
+source ~/.vim/src/keymapping.vim
