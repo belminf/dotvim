@@ -87,5 +87,8 @@ Plug 'pearofducks/ansible-vim', { 'for': 'ansible' }
 " vim-go: Golang support
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
+" neocomplete: auto complete
+Plug 'Shougo/neocomplete.vim'
+
 " Initialize plugin system
 call plug#end()
