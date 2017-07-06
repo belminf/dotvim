@@ -84,6 +84,8 @@ Plug 'airblade/vim-gitgutter'
 " ansible-vim: detect if file ansible
 Plug 'pearofducks/ansible-vim', { 'for': 'ansible' }
 
+" vim-go: Golang support
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
 " Initialize plugin system
 call plug#end()
