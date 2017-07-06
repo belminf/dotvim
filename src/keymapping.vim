@@ -78,3 +78,9 @@ map q :call CloseOnLast()<CR>
 "nmap <C-e> :lnext<CR>
 "nmap <C-E> :lprev<CR>
 "nmap <silent> <C-Tab> :lnext<CR>
+
+" Golang
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
