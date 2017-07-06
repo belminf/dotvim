@@ -62,8 +62,13 @@ Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
 Plug 'godlygeek/tabular'
 
 " ctrlp: searching
-Plug 'kien/ctrlp.vim', { 'on':  'CtrlP' }
-
+Plug 'ctrlpvim/ctrlp.vim', { 'on':  'CtrlP' }
+let g:ctrlp_prompt_mappings = {
+    \ 'ToggleType(1)':        ['<tab>'],
+    \ 'ToggleType(-1)':       ['<s-tab>'],
+    \ 'ToggleFocus()':        [],
+    \ 'PrtExpandDir()':       [],
+\ }
 let g:ctrlp_custom_ignore={
     \ 'dir':  '\.(git|hg|svn)$',
     \ 'file': '\.(pyc)$',
