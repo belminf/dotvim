@@ -1,8 +1,7 @@
 Installing:
 -----------
 OS requirements:
-* RHEL: `yum install --enablerepo='epel' -y vim the_silver_searcher`
-* Ubuntu: `apt-get install -y vim silversearcher-ag`
+* Ubuntu: `apt-get install -y vim-nox silversearcher-ag`
 * Cygwin: `apt-cyg install vim the_silver_searcher`
 
 Python requirements: `pip install flake8`
