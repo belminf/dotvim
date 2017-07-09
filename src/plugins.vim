@@ -75,6 +75,8 @@ let g:ctrlp_custom_ignore={
 \ }
 let g:ctrlp_cmd='CtrlPMixed'
 let g:ctrlp_working_path_mode='ra'
+au StdinReadPre * let s:std_in=1
+au VimEnter * if argc() == 0 && !exists("s:std_in") | execute "CtrlP" | endif
 
 " ag: searching
 Plug 'mileszs/ack.vim'
