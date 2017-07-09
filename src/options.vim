@@ -38,4 +38,7 @@ set hidden		" hide the buffer, don't close
 set title		" change the terminal's title
 set laststatus=2	" always show status line
 
+" Remember last position
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
 let &titleold=getcwd()
