@@ -81,7 +81,8 @@ map q :call CloseOnLast()<CR>
 
 " Golang
 au FileType go nmap <leader>b <Plug>(go-build)
-au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>t <Plug>(go-imports)<bar><Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
 au FileType go nmap ! <Plug>(go-run)
 au FileType go nmap @ <Plug>(go-def)
+au FileType go map <silent><F9> :write<CR>:GoImports<CR>:GoTest<CR>
