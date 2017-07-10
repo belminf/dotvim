@@ -20,8 +20,8 @@ au BufLeave NERD_tree_* unmap <Esc>
 Plug 'scrooloose/nerdcommenter'
 let NERDCreateDefaultMappings=0
 
-" vim-autoclose: highlight close tags
-Plug 'townk/vim-autoclose'
+" vim-autopairs: highlight close tags
+Plug 'jiangmiao/auto-pairs'
 
 " vim-airline: status bar
 "" Addresses issue with RHEL6 and 5
