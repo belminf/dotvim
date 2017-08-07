@@ -4,9 +4,6 @@ call plug#begin('~/.vim/local/plugged')
 " Plugins
 "
 
-" Vundle
-Plug 'VundleVim/Vundle.vim'
-
 " Nerdtree: file browser
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 let NERDTreeQuitOnOpen=1
