@@ -55,6 +55,14 @@ au FileType yaml set shiftwidth=2
 au FileType yaml set expandtab
 au FileType yaml set smartindent
 
+" Terraform formatting
+au BufNewFile,BufRead *.tf set filetype=tf
+au FileType tf set tabstop=2
+au FileType tf set softtabstop=2
+au FileType tf set shiftwidth=2
+au FileType tf set expandtab
+au FileType tf set smartindent
+
 " Golang formatting
 au BufNewFile,BufRead *.go set filetype=go
 au FileType go set tabstop=2
