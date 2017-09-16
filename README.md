@@ -12,6 +12,7 @@ git clone git@github.com:belminf/dotvim.git ~/.config/vim
 
 # Link vimrc and install plugins
 mv ~/.vimrc ~/.vimrc.original
+ln -s ~/.config/vim/ ~/.vim
 ln -s ~/.config/vim/rc.vim ~/.vimrc
 vim +PlugInstall +qall
 ```
