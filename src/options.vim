@@ -1,4 +1,5 @@
 set number		" always show line numbers
+set relativenumber	" show relative number
 set ruler		" always show current position
 set showmatch		" set show matching parenthesis
 set ignorecase		" ignore case when searching
