@@ -71,7 +71,7 @@ function! CloseOnLast()
 endfunction
 
 "" Quit and close windows
-map q :call CloseOnLast()<CR>
+map <silent>q :call CloseOnLast()<CR>
 
 " Disabled mappings
 "" Disable F1
