@@ -10,8 +10,6 @@ let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden =1
 let NERDTreeMinimalUI=1
 let NERDTreeIgnore=['\.pyc$', '.git']
-au BufEnter NERD_tree_* nmap <silent> <C-[> :NERDTreeToggle<CR>
-au BufLeave NERD_tree_* nunmap <C-[>
 
 " Nerdcommenter: quick commenting
 Plug 'scrooloose/nerdcommenter'
@@ -69,8 +67,6 @@ let g:ctrlp_custom_ignore={
 \ }
 let g:ctrlp_cmd='CtrlPMixed'
 let g:ctrlp_working_path_mode='ra'
-au StdinReadPre * let s:std_in=1
-au VimEnter * if argc() == 0 && !exists("s:std_in") | execute "CtrlP" | endif
 
 " ag: searching
 Plug 'mileszs/ack.vim'
