@@ -4,6 +4,9 @@ call plug#begin('~/.vim/local/plugged')
 " Plugins
 "
 
+" vim-min: my minimal note management plugin
+Plug 'belminf/min.vim'
+
 " Nerdtree: file browser
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 let NERDTreeQuitOnOpen=1
