@@ -23,36 +23,28 @@ nmap . <Plug>(easymotion-s2)
 nmap # <Plug>NERDCommenterToggle
 xmap # <Plug>NERDCommenterToggle
 
-" Toggle buffers
-function! GetBufferList()
-  redir =>buflist
-  silent! ls!
-  redir END
-  return buflist
-endfunction
-
-function! ToggleList(bufname, pfx)
-  let buflist=GetBufferList()
-  for bufnum in map(filter(split(buflist, '\n'), 'v:val =~ "'.a:bufname.'"'), 'str2nr(matchstr(v:val, "\\d\\+"))')
-    if bufwinnr(bufnum) != -1
-      exec(a:pfx.'close')
-      return
+" Toggle the quickfix window.
+" Src: http://vim.wikia.com/wiki/Toggle_to_open_or_close_the_quickfix_window
+function! ToggleQuickfix()
+    if exists("g:qfix_win")
+	cclose
+    else
+	execute "copen 10"
     endif
-  endfor
-  if a:pfx == 'l' && len(getloclist(0)) == 0
-      echohl ErrorMsg
-      echo "Location List is Empty."
-      return
-  endif
-  let winnr=winnr()
-  exec(a:pfx.'open')
-  if winnr() != winnr
-    wincmd p
-  endif
 endfunction
 
-"" Toggle quicklist (used for AG)
-nmap <silent> <F2> :call ToggleList("Quickfix List", 'c')<CR>
+" Track quickfix
+augroup QFixToggle
+    autocmd!
+    autocmd BufWinEnter quickfix let g:qfix_win = bufnr("$")
+    autocmd BufWinLeave * if exists("g:qfix_win") && expand("<abuf>") == g:qfix_win | unlet! g:qfix_win | endif
+augroup END
+
+" Mapping of F2
+nmap <silent> <F2> :call ToggleQuickfix()<CR>
+
+" Close after you hit Enter in quickfix
+autocmd BufReadPost quickfix nnoremap <silent> <buffer> <CR> <CR>:cclose<CR>
 
 function! CloseOnLast()
   let cnt = 0
