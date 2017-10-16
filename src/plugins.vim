@@ -46,10 +46,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'lokaltog/vim-easymotion'
 let g:EasyMotion_smartcase=1
 
-" wildfire: select stanzas
-Plug 'gcmt/wildfire.vim'
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.git,*.pyc
-
 " vim-puppet: enhancements for puppet writing
 Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
 
