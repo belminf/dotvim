@@ -10,7 +10,7 @@ map <silent><Space> :CtrlP<CR>
 "" Clear highlighting
 map <silent><F3> :nohl<CR>
 "" Toggle number
-map <silent><F4> :set number!<CR>
+map <silent><F4> :set number! relativenumber!<CR>
 "" AG search
 nmap ' :Ack<Space>
 "" Browse
@@ -22,6 +22,10 @@ nmap . <Plug>(easymotion-s2)
 "" Comment out a line or block
 nmap # <Plug>NERDCommenterToggle
 xmap # <Plug>NERDCommenterToggle
+
+"" Go to next
+nmap <silent>{ :cb<CR>
+nmap <silent>} :cn<CR>
 
 " Toggle the quickfix window.
 " Src: http://vim.wikia.com/wiki/Toggle_to_open_or_close_the_quickfix_window
