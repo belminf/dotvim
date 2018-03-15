@@ -16,6 +16,10 @@ set t_Co=256
 set term=xterm-256color
 set termencoding=utf-8
 
+" So mouse works with tmux
+set ttymouse=xterm2
+set mouse=a
+
 " Centralized backup
 set backupdir=~/.vim/local/backups
 set backup
