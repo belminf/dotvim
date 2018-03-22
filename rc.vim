@@ -18,3 +18,6 @@ source ~/.vim/src/colors.vim
 
 " Keymapping
 source ~/.vim/src/keymapping.vim
+
+" Fuzzy search
+source ~/.vim/src/fuzzysearch.vim
