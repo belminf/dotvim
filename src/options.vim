@@ -34,9 +34,11 @@ endif
 set directory=~/.vim/local/swap
 
 " Default indent
+set smartindent
+set expandtab
 set shiftwidth=4
 set softtabstop=4
-set smartindent
+set tabstop=8
 
 " Buffer issues
 set hidden		" hide the buffer, don't close
