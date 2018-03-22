@@ -4,9 +4,6 @@ call plug#begin('~/.vim/local/plugged')
 " Plugins
 "
 
-" vim-min: my minimal note management plugin
-Plug 'belminf/min.vim'
-
 " Nerdtree: file browser
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 let NERDTreeQuitOnOpen=1
@@ -39,9 +36,6 @@ Plug 'scrooloose/syntastic'
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_python_flake8_args='--ignore=E501,E225'
 
-" auto-pairs: close brackets
-Plug 'jiangmiao/auto-pairs'
-
 " vim-easymotion: quickly move in doc
 Plug 'lokaltog/vim-easymotion'
 let g:EasyMotion_smartcase=1
@@ -66,13 +60,6 @@ let g:ctrlp_custom_ignore={
 \ }
 let g:ctrlp_cmd='CtrlPMixed'
 let g:ctrlp_working_path_mode='ra'
-
-" ag: searching
-Plug 'mileszs/ack.vim'
-let g:ag_working_path_mode ="r"
-if executable('ag')
-    let g:ackprg = 'ag --vimgrep --smart-case'
-endif
 
 " vim-gitgutter: add git status in gutter
 Plug 'airblade/vim-gitgutter'
