@@ -1,12 +1,12 @@
 " Default
 au BufNewFile,BufRead * NeoCompleteLock
 
+" Default indent
 set smartindent
 set expandtab
 set shiftwidth=4
 set softtabstop=4
 set tabstop=8
-
 
 " Python formatting
 au BufNewFile,BufRead *.py set filetype=python

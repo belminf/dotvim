@@ -33,13 +33,6 @@ endif
 " vim swap
 set directory=~/.vim/local/swap
 
-" Default indent
-set smartindent
-set expandtab
-set shiftwidth=4
-set softtabstop=4
-set tabstop=8
-
 " Buffer issues
 set hidden		" hide the buffer, don't close
 set title		" change the terminal's title
