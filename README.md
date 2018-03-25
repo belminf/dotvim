@@ -1,7 +1,7 @@
 Installing:
 -----------
 OS requirements:
-* Arch: `pacman -S gvim the_silver_searcher`
+* Arch: `pacman -S gvim the_silver_searcher fzy`
 * Ubuntu: `apt-get install -y vim-nox silversearcher-ag`
 * Cygwin: `apt-cyg install vim the_silver_searcher`
 
