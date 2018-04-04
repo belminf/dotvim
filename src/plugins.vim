@@ -74,6 +74,8 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1  
 let g:go_highlight_operators = 1  
 let g:go_highlight_build_constraints = 1 
+let g:go_version_warning = 0
+
 
 " neocomplete: auto complete
 Plug 'Shougo/neocomplete.vim'
