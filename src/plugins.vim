@@ -10,6 +10,8 @@ let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden =1
 let NERDTreeMinimalUI=1
 let NERDTreeIgnore=['\.pyc$', '\.git', '__pycache__']
+let g:loaded_netrw       = 1
+let g:loaded_netrwPlugin = 1
 
 " Nerdcommenter: quick commenting
 Plug 'scrooloose/nerdcommenter'
