@@ -46,7 +46,7 @@ au FileType go NeoCompleteUnlock
 
 " Markdown formatting
 au BufNewFile,BufRead *.md set filetype=markdown
-au Filetype markdown set spell spelllang=en_us
+au Filetype markdown setlocal spell spelllang=en_us
 
 " Vim formatting
 au BufNewFile,BufRead *.vim set filetype=vim
