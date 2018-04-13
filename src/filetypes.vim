@@ -31,8 +31,8 @@ au BufNewFile,BufRead *.rb set filetype=ruby
 
 " Bash formatting
 au BufNewFile,BufRead *.sh set filetype=sh
-set shiftwidth=2
-set softtabstop=2
+au Filetype sh set shiftwidth=2
+au Filetype sh set softtabstop=2
 
 " YAML formatting
 au BufNewFile,BufRead *.yaml set filetype=yaml
