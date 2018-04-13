@@ -78,6 +78,8 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1 
 let g:go_version_warning = 0
 
+" fuzzysearch: Fuzzy ag searches
+Plug 'belminf/fuzzysearch.vim'
 
 " neocomplete: auto complete
 Plug 'Shougo/neocomplete.vim'

@@ -23,6 +23,9 @@ vmap = <Plug>(easymotion-s2)
 "" Comment out a line or block
 nmap # <Plug>NERDCommenterToggle
 xmap # <Plug>NERDCommenterToggle
+"" fuzzysearch
+nmap \ :FuzzyGrep 
+
 
 "" Go to next
 nmap <silent>{ :cb<CR>
