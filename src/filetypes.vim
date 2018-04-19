@@ -31,3 +31,7 @@ au FileType go NeoCompleteUnlock
 
 " Markdown formatting
 au Filetype markdown setlocal spell spelllang=en_us
+
+" YAML formatting
+au FileType yaml set shiftwidth=2
+au FileType yaml set softtabstop=2
