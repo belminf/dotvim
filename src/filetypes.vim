@@ -9,7 +9,6 @@ set softtabstop=4
 set tabstop=8
 
 " Python formatting
-au BufNewFile,BufRead *.py set filetype=python
 au FileType python set cinwords=if,elif,else,for,while,try,except,finally,def,class
 au BufWritePre *.py :%s/\s\+$//e
 
@@ -35,3 +34,7 @@ au Filetype markdown setlocal spell spelllang=en_us
 " YAML formatting
 au FileType yaml set shiftwidth=2
 au FileType yaml set softtabstop=2
+
+au BufNewFile,BufRead rsnapshot*.conf set filetype=rsnapshot_conf
+au FileType rsnapshot_confset noexpandtab
+au FileType rsnapshot_confset tabstop=4
