@@ -36,5 +36,5 @@ au FileType yaml set shiftwidth=2
 au FileType yaml set softtabstop=2
 
 au BufNewFile,BufRead rsnapshot*.conf set filetype=rsnapshot_conf
-au FileType rsnapshot_confset noexpandtab
-au FileType rsnapshot_confset tabstop=4
+au FileType rsnapshot_conf set noexpandtab
+au FileType rsnapshot_conf set tabstop=4
