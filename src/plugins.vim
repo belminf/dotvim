@@ -37,6 +37,9 @@ let g:airline_powerline_fonts = 1
 Plug 'scrooloose/syntastic'
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_python_flake8_args='--ignore=E501,E225'
+let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_javascript_eslint_exec='/bin/ls'
+let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
 
 " vim-easymotion: quickly move in doc
 Plug 'lokaltog/vim-easymotion'
