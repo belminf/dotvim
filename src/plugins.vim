@@ -60,8 +60,8 @@ let g:ctrlp_prompt_mappings = {
     \ 'PrtExpandDir()':       [],
 \ }
 let g:ctrlp_custom_ignore={
-    \ 'dir':  '\.(git|hg|svn)$',
-    \ 'file': '\.(pyc)$',
+    \ 'dir':  '\v\[\/](node_modules|target|dist)|(\.(git|hg|svn|swp))$',
+    \ 'file': '\v\.(pyc)$',
 \ }
 let g:ctrlp_cmd='CtrlPMixed'
 let g:ctrlp_working_path_mode='ra'
