@@ -23,6 +23,9 @@ nmap # <Plug>NERDCommenterToggle
 xmap # <Plug>NERDCommenterToggle
 "" fuzzysearch
 nmap \ :FuzzyGrep 
+"" visual mode tab
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
 
 
 "" Go to next
