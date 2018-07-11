@@ -20,6 +20,9 @@ let NERDCreateDefaultMappings=0
 " vim-autopairs: highlight close tags
 Plug 'jiangmiao/auto-pairs'
 
+" indentLine: makes indent char visible
+Plug 'Yggdroot/indentLine'
+
 " vim-airline: status bar
 "" Addresses issue with RHEL6 and 5
 if v:version > 702
