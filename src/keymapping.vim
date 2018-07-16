@@ -10,7 +10,7 @@ map <silent><Space> :CtrlP<CR>
 "" Clear highlighting
 map <silent><F3> :nohl<CR>
 "" Toggle number
-map <silent><F4> :set number!<CR>
+map <silent><F4> :set number!<CR>:sign unplace *<CR>:IndentLinesToggle<CR>
 "" Browse
 map <silent> - :NERDTreeToggle<CR>
 "" Selection
