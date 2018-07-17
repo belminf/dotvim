@@ -12,8 +12,12 @@ set backspace=indent,eol,start
 scriptencoding utf-8
 set encoding=utf-8
 set t_Co=256
-set term=xterm-256color
 set termencoding=utf-8
+
+" Set color for regular vim
+if !has('nvim')
+    set term=xterm-256color
+endif
 
 " Centralized backup
 set backupdir=~/.vim/local/backups
