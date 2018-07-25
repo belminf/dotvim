@@ -10,6 +10,8 @@ set tabstop=8
 
 " Python formatting
 au FileType python set cinwords=if,elif,else,for,while,try,except,finally,def,class
+au FileType python set foldmethod=indent
+au FileType python set foldnestmax=1
 au BufWritePre *.py :%s/\s\+$//e
 
 " Puppet formatting
