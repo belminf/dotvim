@@ -44,6 +44,12 @@ let g:syntastic_javascript_checkers=['eslint']
 let g:syntastic_javascript_eslint_exec='/bin/ls'
 let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
 
+" ack.vim for using ack in vim
+Plug 'mileszs/ack.vim'
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
 " vim-easymotion: quickly move in doc
 Plug 'lokaltog/vim-easymotion'
 let g:EasyMotion_smartcase=1
@@ -83,9 +89,6 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1  
 let g:go_highlight_build_constraints = 1 
 let g:go_version_warning = 0
-
-" fuzzysearch: Fuzzy ag searches
-Plug 'belminf/fuzzysearch.vim'
 
 " neocomplete: auto complete
 Plug 'Shougo/neocomplete.vim'

@@ -22,7 +22,8 @@ vmap = <Plug>(easymotion-s2)
 nmap # <Plug>NERDCommenterToggle
 xmap # <Plug>NERDCommenterToggle
 "" fuzzysearch
-nmap \ :FuzzyGrep 
+cnoreabbrev Ack Ack!
+nmap \ :Ack<Space>
 "" visual mode tab
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
