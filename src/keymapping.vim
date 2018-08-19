@@ -11,6 +11,8 @@ map <silent><Space> :CtrlP<CR>
 map <silent><F3> :nohl<CR>
 "" Toggle number
 map <silent><F4> :set number!<CR>:sign unplace *<CR>:IndentLinesToggle<CR>
+"" Tagbar
+map <silent> _ :TagbarOpenAutoClose<CR>
 "" Browse
 map <silent> - :NERDTreeToggle<CR>
 "" Selection
