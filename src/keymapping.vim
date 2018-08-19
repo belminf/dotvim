@@ -94,4 +94,4 @@ nmap <silent>q :call Close()<CR>
 "au FileType go nmap <leader>c <Plug>(go-coverage)
 "au FileType go nmap @ <Plug>(go-def)
 "au FileType go map <silent><F9> :write<CR>:GoImports<CR>:GoTest<CR>
-au FileType go nmap ! :w<CR>:vsplit <bar> terminal go run %<CR>
+au FileType go nmap <silent>! :w<CR>:split <bar> terminal go run %<CR>
