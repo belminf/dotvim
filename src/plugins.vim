@@ -36,13 +36,15 @@ let g:airline#extensions#bufferline#enabled=1
 let g:airline#extensions#tabline#buffer_nr_show=1
 let g:airline_powerline_fonts = 1
 
-" Syntastic: check syntax
-Plug 'scrooloose/syntastic'
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_python_flake8_args='--ignore=E501,E225'
-let g:syntastic_javascript_checkers=['eslint']
-let g:syntastic_javascript_eslint_exec='/bin/ls'
-let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
+" ale: syntax linter
+Plug 'w0rp/ale'
+let g:ale_sign_error = '⤫'
+let g:ale_sign_warning = '⚠'
+let g:airline#extensions#ale#enabled = 1
+
+" gutentags - manages tags
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'majutsushi/tagbar'
 
 " ack.vim for using ack in vim
 Plug 'mileszs/ack.vim'
@@ -89,37 +91,20 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1  
 let g:go_highlight_build_constraints = 1 
 let g:go_version_warning = 0
+let g:go_fmt_command = "goimports"
+let g:go_term_mode = "split"
+let g:go_term_enabled = 1
+let g:go_auto_sameids = 1
+let g:go_auto_type_info = 1
 
-" neocomplete: auto complete
-Plug 'Shougo/neocomplete.vim'
-" Disable AutoComplPop and use neocomplete
-let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_at_startup = 1
-" Use smartcase.
-let g:neocomplete#enable_smart_case = 1
-" Set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-" Auto close preview window
-let g:neocomplete#enable_auto_close_preview = 1
 
-" Plugin key-mappings.
-inoremap <expr><C-g>     neocomplete#undo_completion()
-inoremap <expr><C-l>     neocomplete#complete_common_string()
 
-" Recommended key-mappings.
-" <CR>: close popup and save indent.
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-    return neocomplete#close_popup() . "\<CR>"
-endfunction
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y>  neocomplete#close_popup()
-inoremap <expr><C-e>  neocomplete#cancel_popup()
-
+" nvim specific stuff
+if has('nvim')
+ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+ Plug 'zchee/deoplete-go', {'build': {'unix': 'make'}}
+ Plug 'jodosha/vim-godebug' " Debugger integration via delve
+endif
 
 " Initialize plugin system
 call plug#end()
