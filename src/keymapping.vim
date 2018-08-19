@@ -58,24 +58,27 @@ nmap <silent> <F2> :call ToggleQuickfix()<CR>
 " Close after you hit Enter in quickfix
 autocmd BufReadPost quickfix nnoremap <silent> <buffer> <CR> <CR>:cclose<CR>
 
-function! CloseOnLast()
+function! Close()
   let cnt = 0
 
+  " Count visible buffers
   for i in range(0, bufnr("$"))
     if buflisted(i)
       let cnt += 1
     endif
   endfor
 
+  " Add ! if terminal
+  let term_excl = match(expand('%'), "term://") == 0? '!': ''
   if cnt <= 1
-    q
+    execute "q" . term_excl
   else
-    bw
+    execute "bd" . term_excl
   endif
 endfunction
 
 "" Quit and close windows
-map <silent>q :call CloseOnLast()<CR>
+nmap <silent>q :call Close()<CR>
 
 " Disabled mappings
 "" Disable F1
