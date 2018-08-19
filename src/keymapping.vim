@@ -86,9 +86,9 @@ map <silent>q :call CloseOnLast()<CR>
 "nmap <silent> <C-Tab> :lnext<CR>
 
 " Golang
-au FileType go nmap <leader>b <Plug>(go-build)
-au FileType go nmap <leader>t <Plug>(go-imports)<bar><Plug>(go-test)
-au FileType go nmap <leader>c <Plug>(go-coverage)
-au FileType go nmap ! <Plug>(go-run)
-au FileType go nmap @ <Plug>(go-def)
-au FileType go map <silent><F9> :write<CR>:GoImports<CR>:GoTest<CR>
+"au FileType go nmap <leader>b <Plug>(go-build)
+"au FileType go nmap <leader>t <Plug>(go-imports)<bar><Plug>(go-test)
+"au FileType go nmap <leader>c <Plug>(go-coverage)
+"au FileType go nmap @ <Plug>(go-def)
+"au FileType go map <silent><F9> :write<CR>:GoImports<CR>:GoTest<CR>
+au FileType go nmap ! :w<CR>:vsplit <bar> terminal go run %<CR>
