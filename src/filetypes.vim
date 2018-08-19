@@ -1,6 +1,3 @@
-" Default
-au BufNewFile,BufRead * NeoCompleteLock
-
 " Default indent
 set smartindent
 set expandtab
@@ -26,9 +23,6 @@ au FileType html set softtabstop=2
 " Django templates
 au FileType htmldjango set shiftwidth=2
 au FileType htmldjango set softtabstop=2
-
-" Golang formatting
-au FileType go NeoCompleteUnlock
 
 " Markdown formatting
 au Filetype markdown setlocal spell spelllang=en_us
