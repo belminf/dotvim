@@ -22,6 +22,11 @@ au FileType html set softtabstop=2
 au FileType htmldjango set shiftwidth=2
 au FileType htmldjango set softtabstop=2
 
+" Golang
+au FileType go set shiftwidth=4
+au FileType go set softtabstop=4
+au FileType go set tabstop=4
+
 " Markdown formatting
 au Filetype markdown setlocal spell spelllang=en_us
 
