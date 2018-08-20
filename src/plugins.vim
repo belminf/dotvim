@@ -97,14 +97,21 @@ let g:go_term_enabled = 1
 let g:go_auto_sameids = 1
 let g:go_auto_type_info = 1
 
-
-
 " nvim specific stuff
 if has('nvim')
- Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
- Plug 'zchee/deoplete-go', {'build': {'unix': 'make'}}
- Plug 'jodosha/vim-godebug' " Debugger integration via delve
+
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'zchee/deoplete-go', { 'do': 'make' }
+    Plug 'jodosha/vim-godebug'
+    Plug 'ervandew/supertab'
+
+    let g:deoplete#enable_at_startup = 1
+    let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
+    let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+    set completeopt+=noselect
+
 endif
+
 
 " Initialize plugin system
 call plug#end()
