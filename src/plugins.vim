@@ -87,17 +87,21 @@ Plug 'pearofducks/ansible-vim', { 'for': 'ansible' }
 
 " vim-go: Golang support
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+" Ref: https://github.com/laher/dotfiles/blob/master/vim/.vim/am/go.vim
+let g:go_fmt_command = "goimports"
 let g:go_highlight_functions = 1  
 let g:go_highlight_methods = 1  
 let g:go_highlight_structs = 1  
 let g:go_highlight_operators = 1  
 let g:go_highlight_build_constraints = 1 
-let g:go_version_warning = 0
-let g:go_fmt_command = "goimports"
 let g:go_term_mode = "split"
-let g:go_term_enabled = 1
-let g:go_auto_sameids = 1
 let g:go_auto_type_info = 1
+let g:go_updatetime = 5000
+let g:go_info_mode = 'gocode'
+let g:go_auto_sameids = 1
+
+let g:python3_host_prog  = '/usr/bin/python3'
+let g:python3_host_skip_check = 1
 
 " nvim specific stuff
 if has('nvim')
@@ -106,11 +110,17 @@ if has('nvim')
     Plug 'zchee/deoplete-go', { 'do': 'make' }
     Plug 'jodosha/vim-godebug'
     Plug 'ervandew/supertab'
+    Plug 'Shougo/echodoc.vim'
+
+    set completeopt+=noselect
+    set completeopt+=noinsert
+    set completeopt-=preview
+    set noshowmode
 
     let g:deoplete#enable_at_startup = 1
     let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
     let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
-    set completeopt+=noselect
+    autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
 endif
 
