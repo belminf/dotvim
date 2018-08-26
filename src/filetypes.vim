@@ -1,4 +1,4 @@
-" Default indent
+" Defautocmdlt indent
 set smartindent
 set expandtab
 set shiftwidth=4
@@ -6,37 +6,65 @@ set softtabstop=4
 set tabstop=8
 
 " Python formatting
-au FileType python set cinwords=if,elif,else,for,while,try,except,finally,def,class
-au BufWritePre *.py :%s/\s\+$//e
+augroup ft_python
+    autocmd!
+    autocmd FileType python set cinwords=if,elif,else,for,while,try,except,finally,def,class
+    autocmd BufWritePre *.py :%s/\s\+$//e
+augroup END
 
 " Puppet formatting
-au BufNewFile,BufRead *.pp set filetype=puppet
-au FileType puppet set nowrap
-au FileType puppet inoremap # .<c-h>#<space>
+augroup ft_puppet
+    autocmd!
+    autocmd BufNewFile,BufRead *.pp set filetype=puppet
+    autocmd FileType puppet set nowrap
+    autocmd FileType puppet inoremap # .<c-h>#<space>
+augroup END
 
 " HTML formatting
-au FileType html set shiftwidth=2
-au FileType html set softtabstop=2
+augroup ft_html
+    autocmd!
+    autocmd FileType html set shiftwidth=2
+    autocmd FileType html set softtabstop=2
+augroup END
 
 " Django templates
-au FileType htmldjango set shiftwidth=2
-au FileType htmldjango set softtabstop=2
+augroup ft_django
+    autocmd!
+    autocmd FileType htmldjango set shiftwidth=2
+    autocmd FileType htmldjango set softtabstop=2
+augroup END
 
 " Golang
-au FileType go set shiftwidth=4
-au FileType go set softtabstop=4
-au FileType go set tabstop=4
+augroup ft_golang
+    autocmd!
+    autocmd FileType go set shiftwidth=4
+    autocmd FileType go set softtabstop=4
+    autocmd FileType go set tabstop=4
+augroup END
 
 " Markdown formatting
-au Filetype markdown setlocal spell spelllang=en_us
+augroup ft_markdown
+    autocmd!
+    autocmd Filetype markdown setlocal spell spelllang=en_us
+augroup END
 
 " Plain text formatting
-au Filetype text setlocal spell spelllang=en_us
+augroup ft_text
+    autocmd!
+    autocmd Filetype text setlocal spell spelllang=en_us
+augroup END
 
 " YAML formatting
-au FileType yaml set shiftwidth=2
-au FileType yaml set softtabstop=2
+augroup ft_yaml
+    autocmd!
+    autocmd FileType yaml set shiftwidth=2
+    autocmd FileType yaml set softtabstop=2
+augroup END
 
-au BufNewFile,BufRead rsnapshot*.conf set filetype=rsnapshot_conf
-au FileType rsnapshot_conf set noexpandtab
-au FileType rsnapshot_conf set tabstop=4
+" rsnapshot config
+augroup ft_rsnapshot_conf
+    autocmd!
+    autocmd BufNewFile,BufRead rsnapshot*.conf set filetype=rsnapshot_conf
+    autocmd FileType rsnapshot_conf set noexpandtab
+    autocmd FileType rsnapshot_conf set tabstop=4
+augroup END
