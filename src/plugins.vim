@@ -41,6 +41,8 @@ Plug 'w0rp/ale'
 let g:ale_sign_error = '⤫'
 let g:ale_sign_warning = '⚠'
 let g:airline#extensions#ale#enabled = 1
+let g:ale_linters = {'php': ['php']}
+let g:ale_fixers = {'php': ['php_cs_fixer']}
 
 " gutentags - manages tags
 Plug 'ludovicchabant/vim-gutentags'
