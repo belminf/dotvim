@@ -30,6 +30,10 @@ nmap \ :Ack<Space>
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
+"" Escape terminal
+if has('nvim')
+    tnoremap <Esc> <C-\><C-n>
+endif
 
 "" Go to next
 nmap <silent>{ :cb<CR>
