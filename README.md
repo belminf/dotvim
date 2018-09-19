@@ -21,7 +21,7 @@ Update:
 -------
 ```
 git pull origin master
-vim +PlugUpdate +qall
+vim +PlugUpdate
 ```
 
 Keys:
