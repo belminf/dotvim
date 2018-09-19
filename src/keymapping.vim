@@ -1,7 +1,5 @@
 " Key mapping
 let mapleader=","
-"" Maintains cursor pos when switching buffer
-au BufEnter * silent! normal! g`""`
 "" Move buffers
 nmap <silent> <Tab><Tab> :bn<CR>
 nmap <silent> <S-Tab><S-Tab> :bp<CR>
