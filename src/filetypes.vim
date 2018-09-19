@@ -40,6 +40,9 @@ augroup ft_golang
     autocmd FileType go set shiftwidth=4
     autocmd FileType go set softtabstop=4
     autocmd FileType go set tabstop=4
+    autocmd FileType go set foldmethod=syntax
+    autocmd FileType go set foldnestmax=1
+    autocmd FileType go set foldclose=all
 augroup END
 
 " Markdown formatting
