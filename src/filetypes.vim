@@ -5,6 +5,13 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=8
 
+" Remember folds
+augroup remember_folds
+  autocmd!
+  autocmd BufWinLeave * mkview
+  autocmd BufWinEnter * silent! loadview
+augroup END
+
 " Python formatting
 augroup ft_python
     autocmd!
@@ -42,7 +49,6 @@ augroup ft_golang
     autocmd FileType go set tabstop=4
     autocmd FileType go set foldmethod=syntax
     autocmd FileType go set foldnestmax=1
-    autocmd FileType go set foldclose=all
 augroup END
 
 " Markdown formatting

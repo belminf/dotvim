@@ -132,6 +132,7 @@ let g:go_auto_type_info = 1
 let g:go_updatetime = 5000
 let g:go_info_mode = 'gocode'
 let g:go_auto_sameids = 1
+let g:go_fmt_experimental = 1
 
 let g:python3_host_prog  = '/usr/bin/python3'
 let g:python3_host_skip_check = 1

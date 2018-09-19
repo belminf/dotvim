@@ -8,6 +8,7 @@ set hlsearch		" highlight search
 set incsearch		" highlight as you search
 set history=50		" keep 50 lines of command line history
 set showcmd		" display incomplete commands
+set foldopen+=jump      " jump opens a fold
 set backspace=indent,eol,start
 scriptencoding utf-8
 set encoding=utf-8
