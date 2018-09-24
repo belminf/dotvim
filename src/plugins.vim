@@ -158,6 +158,9 @@ if has('nvim')
 
 endif
 
+" terraform
+Plug 'hashivim/vim-terraform'
+let g:terraform_align=1
 
 " Initialize plugin system
 call plug#end()

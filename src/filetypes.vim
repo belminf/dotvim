@@ -77,3 +77,10 @@ augroup ft_rsnapshot_conf
     autocmd FileType rsnapshot_conf set noexpandtab
     autocmd FileType rsnapshot_conf set tabstop=4
 augroup END
+
+" terraform
+augroup ft_terraform
+    autocmd!
+    autocmd FileType terraform set shiftwidth=2
+    autocmd FileType terraform set softtabstop=2
+augroup END
