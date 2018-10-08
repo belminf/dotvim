@@ -1,5 +1,5 @@
 " vim-plug initializing
-call plug#begin('~/.vim/local/plugged')
+call plug#begin('~/.config/nvim/local/plugged')
 
 " Plugins
 "

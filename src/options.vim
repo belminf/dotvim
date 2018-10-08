@@ -20,18 +20,18 @@ if !has('nvim')
     set term=xterm-256color
 endif
 
+" Get config path
+let s:path = expand('<sfile>:p:h')
+
 " Centralized backup
-set backupdir=~/.vim/local/backups
+exec 'set' 'backupdir=' . s:path . '/../local/backups'
 set backup
 
-" vim undo
-if v:version > 702
-    set undodir=~/.vim/local/undo
-    set undofile
-endif
+exec 'set' 'undodir=' . s:path . '/../local/undo'
+set undofile
 
 " vim swap
-set directory=~/.vim/local/swap
+exec 'set' 'directory=' . s:path . '/../local/swap'
 
 " Buffer issues
 set hidden		" hide the buffer, don't close
