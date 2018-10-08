@@ -1,27 +1,22 @@
 Installing:
 -----------
 OS requirements:
-* Arch: `pacman -S gvim the_silver_searcher fzy`
-* Ubuntu: `apt-get install -y vim-nox silversearcher-ag`
-* Cygwin: `apt-cyg install vim the_silver_searcher`
+* Arch: `yay -S neovim flake8 the_silver_searcher fzy ctags`
 
-Python requirements: `pip install flake8`
 
 ```
 # Clone
 git clone git@github.com:belminf/dotvim.git ~/.config/nvim
 
-# Link vimrc and install plugins
-mv ~/.vimrc ~/.vimrc.original
-ln -s ~/.vim/rc.vim ~/.vimrc
-vim +PlugInstall +qall
+# Install plugins
+nvim +PlugInstall
 ```
 
 Update:
 -------
 ```
 git pull origin master
-vim +PlugUpdate
+nvim +PlugUpdate
 ```
 
 Keys:
