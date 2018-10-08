@@ -9,7 +9,7 @@ Python requirements: `pip install flake8`
 
 ```
 # Clone
-git clone git@github.com:belminf/dotvim.git ~/.vim
+git clone git@github.com:belminf/dotvim.git ~/.config/nvim
 
 # Link vimrc and install plugins
 mv ~/.vimrc ~/.vimrc.original
