@@ -1,8 +1,12 @@
-Installing:
------------
-OS requirements:
-* Arch: `yay -S neovim flake8 the_silver_searcher fzy ctags`
+# dotvim
 
+My Neovim configuration.
+
+## Installing:
+OS requirements:
+
+* Arch: `yay -S neovim flake8 the_silver_searcher fzy ctags`
+* macOS: `brew install neovim flake8 the_silver_searcher fzy ctags`
 
 ```
 # Clone
@@ -10,17 +14,47 @@ git clone git@github.com:belminf/dotvim.git ~/.config/nvim
 
 # Install plugins
 nvim +PlugInstall
+
+# For convenience
+ln -s ~/.config/nvim ~/.vim
 ```
 
-Update:
--------
+### Language specific:
+Using [ale](https://github.com/w0rp/ale) for linting. Prefer OS packages if available so that they're managed via system updates.
+
+#### Python
+```
+# Arch
+yay -S python-flake8
+
+# macOS
+brew install flake8
+
+```
+
+#### Ruby
+```
+gem install --user-install rubocop
+```
+
+#### JSON
+```
+# Arch
+yay -S jsonlint
+
+# macOS
+brew install jsonlint
+```
+
+### Update:
+Pull in plugin updates:
+
 ```
 git pull origin master
 nvim +PlugUpdate
 ```
 
-Keys:
------
+## Keys:
 * <kbd>Tab</kbd> <kbd>Tab</kbd>: Next buffer
 * <kbd>Shift</kbd> <kbd>Tab</kbd> <kbd>Tab</kbd>: Previous buffer
 * <kbd>q</kbd>: Delete current buffer
