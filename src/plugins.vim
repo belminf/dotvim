@@ -162,5 +162,8 @@ endif
 Plug 'hashivim/vim-terraform'
 let g:terraform_align=1
 
+Plug 'elzr/vim-json'
+let g:vim_json_syntax_conceal = 0
+
 " Initialize plugin system
 call plug#end()
