@@ -41,10 +41,11 @@ Plug 'w0rp/ale'
 let g:ale_sign_error = '⤫'
 let g:ale_sign_warning = '⚠'
 let g:airline#extensions#ale#enabled = 1
-let g:ale_linters = {'php': ['php']}
 let g:ale_fixers = {
-\   'php':     ['php_cs_fixer'],
-\   '*':       ['remove_trailing_lines', 'trim_whitespace'],
+\   'php':      ['php_cs_fixer'],
+\   'json':     ['jq'],
+\   'ruby':     ['rubocop'],
+\   '*':        ['remove_trailing_lines', 'trim_whitespace'],
 \}
 let g:ale_fix_on_save = 1
 
