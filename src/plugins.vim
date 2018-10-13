@@ -165,5 +165,10 @@ let g:terraform_align=1
 Plug 'elzr/vim-json'
 let g:vim_json_syntax_conceal = 0
 
+Plug 'miyakogi/conoline.vim'
+let g:conoline_auto_enable = 1
+let g:conoline_use_colorscheme_default_normal = 1
+let g:conoline_use_colorscheme_default_insert = 1
+
 " Initialize plugin system
 call plug#end()
