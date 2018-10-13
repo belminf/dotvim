@@ -34,7 +34,7 @@ brew install flake8
 
 #### Ruby
 ```
-gem install --user-install rubocop
+gem install --user-install rufo
 ```
 
 #### JSON
