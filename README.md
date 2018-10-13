@@ -46,6 +46,15 @@ yay -S jsonlint
 brew install jsonlint
 ```
 
+### Terraform
+```
+# Arch
+yay -S tflint
+
+#macOS
+brew tap wata727/tflint && brew install tflint
+```
+
 ### Update:
 Pull in plugin updates:
 
