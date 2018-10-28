@@ -5,7 +5,7 @@ call plug#begin('~/.config/nvim/local/plugged')
 "
 
 " Nerdtree: file browser
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree'
 let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden =1
 let NERDTreeMinimalUI=1
