@@ -77,3 +77,18 @@ augroup ft_terraform
     autocmd FileType terraform set shiftwidth=2
     autocmd FileType terraform set softtabstop=2
 augroup END
+
+" ruby
+augroup ft_ruby
+    autocmd!
+    nmap ! :w<CR>:!ruby %<CR>
+augroup END
+
+" chef
+augroup ft_chef
+    autocmd!
+    autocmd BufRead,BufNewFile */cookbooks/*.rb set filetype=chef | set syntax=ruby.chef
+    autocmd BufRead,BufNewFile */recipes/*.rb set filetype=chef | set syntax=ruby.chef
+    autocmd FileType chef set shiftwidth=2
+    autocmd FileType chef set softtabstop=2
+augroup END
