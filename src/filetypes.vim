@@ -81,7 +81,9 @@ augroup END
 " ruby
 augroup ft_ruby
     autocmd!
-    nmap ! :w<CR>:!ruby %<CR>
+    autocmd FileType ruby nmap ! :w<CR>:!ruby %<CR>
+    autocmd FileType ruby set shiftwidth=2
+    autocmd FileType ruby set softtabstop=2
 augroup END
 
 " chef
