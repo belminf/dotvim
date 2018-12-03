@@ -39,29 +39,6 @@ endif
 nmap <silent>{ :cb<CR>
 nmap <silent>} :cn<CR>
 
-" Toggle the quickfix window.
-" Src: http://vim.wikia.com/wiki/Toggle_to_open_or_close_the_quickfix_window
-function! ToggleQuickfix()
-    if exists("g:qfix_win")
-	cclose
-    else
-	execute "copen 10"
-    endif
-endfunction
-
-" Track quickfix
-augroup QFixToggle
-    autocmd!
-    autocmd BufWinEnter quickfix let g:qfix_win = bufnr("$")
-    autocmd BufWinLeave * if exists("g:qfix_win") && expand("<abuf>") == g:qfix_win | unlet! g:qfix_win | endif
-augroup END
-
-" Mapping of F2
-nmap <silent> <F2> :call ToggleQuickfix()<CR>
-
-" Close after you hit Enter in quickfix
-autocmd BufReadPost quickfix nnoremap <silent> <buffer> <CR> <CR>:cclose<CR>
-
 function! Close()
   let cnt = 0
 
