@@ -69,6 +69,7 @@ augroup ft_rsnapshot_conf
     autocmd BufNewFile,BufRead rsnapshot*.conf set filetype=rsnapshot_conf
     autocmd FileType rsnapshot_conf set noexpandtab
     autocmd FileType rsnapshot_conf set tabstop=4
+    autocmd FileType rsnapshot_conf set shiftwidth=4
 augroup END
 
 " terraform
