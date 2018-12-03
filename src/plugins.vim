@@ -45,8 +45,10 @@ let g:ale_fixers = {
 \   'php':      ['php_cs_fixer'],
 \   'json':     ['jq'],
 \   'ruby':     ['rubocop'],
+\   'sh':       ['shfmt'],
 \   '*':        ['remove_trailing_lines', 'trim_whitespace'],
 \}
+let g:ale_sh_shfmt_options = '-s'
 let g:ale_fix_on_save = 1
 
 " gutentags - manages tags

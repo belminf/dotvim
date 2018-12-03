@@ -95,3 +95,11 @@ augroup ft_chef
     autocmd FileType chef set shiftwidth=2
     autocmd FileType chef set softtabstop=2
 augroup END
+
+" shell
+augroup ft_shell
+    autocmd!
+    autocmd FileType sh set noexpandtab
+    autocmd FileType sh set tabstop=4
+    autocmd FileType sh set shiftwidth=4
+augroup END
