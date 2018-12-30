@@ -99,6 +99,10 @@ augroup END
 " shell
 augroup ft_shell
     autocmd!
+
+    " For terraform shell templates
+    autocmd BufRead,BufNewFile *.sh.tpl set filetype=sh
+
     autocmd FileType sh set noexpandtab
     autocmd FileType sh set tabstop=4
     autocmd FileType sh set shiftwidth=4
