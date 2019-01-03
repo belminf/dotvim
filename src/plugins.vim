@@ -53,36 +53,6 @@ let g:ale_fix_on_save = 1
 
 " gutentags - manages tags
 Plug 'ludovicchabant/vim-gutentags'
-Plug 'majutsushi/tagbar'
-let g:tagbar_compat = 0
-let g:tagbar_autopreview = 1
-let g:tagbar_type_go = {
-    \ 'ctagstype' : 'go',
-    \ 'kinds'     : [
-        \ 'p:package',
-        \ 'i:imports:1',
-        \ 'c:constants',
-        \ 'v:variables',
-        \ 't:types',
-        \ 'n:interfaces',
-        \ 'w:fields',
-        \ 'e:embedded',
-        \ 'm:methods',
-        \ 'r:constructor',
-        \ 'f:functions'
-    \ ],
-    \ 'sro' : '.',
-    \ 'kind2scope' : {
-        \ 't' : 'ctype',
-        \ 'n' : 'ntype'
-    \ },
-    \ 'scope2kind' : {
-        \ 'ctype' : 't',
-        \ 'ntype' : 'n'
-    \ },
-    \ 'ctagsbin'  : 'gotags',
-    \ 'ctagsargs' : '-sort -silent'
-\ }
 
 " ack.vim for using ack in vim
 Plug 'mileszs/ack.vim'
@@ -114,6 +84,7 @@ let g:ctrlp_custom_ignore={
 \ }
 let g:ctrlp_cmd='CtrlPMixed'
 let g:ctrlp_working_path_mode='ra'
+let g:ctrlp_extensions = ['tag']
 
 " vim-gitgutter: add git status in gutter
 Plug 'airblade/vim-gitgutter'

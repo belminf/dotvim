@@ -5,14 +5,11 @@ nmap <silent> <Tab><Tab> :bn<CR>
 nmap <silent> <S-Tab><S-Tab> :bp<CR>
 "" CtrlP
 map <silent><Space> :CtrlP<CR>
+map <silent> _ :CtrlPTag<CR>
 "" Clear highlighting
 map <silent><F3> :nohl<CR>
 "" Toggle number
 map <silent><F4> :set number!<CR>:sign unplace *<CR>:IndentLinesToggle<CR>
-"" Tagbar
-nnoremap <silent> _ :TagbarToggle<CR>
-let g:tagbar_autofocus = 1
-let g:tagbar_autoclose = 1
 "" Browse
 map <silent> - :NERDTreeToggle<CR>
 "" Selection
