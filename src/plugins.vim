@@ -71,7 +71,7 @@ Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
 Plug 'godlygeek/tabular'
 
 " ctrlp: searching
-Plug 'ctrlpvim/ctrlp.vim', { 'on':  'CtrlP' }
+Plug 'ctrlpvim/ctrlp.vim', { 'on':  ['CtrlP', 'CtrlPTag'] }
 let g:ctrlp_prompt_mappings = {
     \ 'ToggleType(1)':        ['<tab>'],
     \ 'ToggleType(-1)':       ['<s-tab>'],
