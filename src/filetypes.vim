@@ -63,6 +63,14 @@ augroup ft_yaml
     autocmd FileType yaml set softtabstop=2
 augroup END
 
+" JSON formatting
+augroup ft_json
+    autocmd!
+    autocmd FileType json set shiftwidth=2
+    autocmd FileType json set softtabstop=2
+augroup END
+
+
 " rsnapshot config
 augroup ft_rsnapshot_conf
     autocmd!
