@@ -15,8 +15,8 @@ map <silent> - :NERDTreeToggle<CR>
 "" Selection
 nmap ` <Plug>(wildfire-quick-select)
 "" Motion
-nmap = <Plug>(easymotion-s2)
-vmap = <Plug>(easymotion-s2)
+nmap , <Plug>(easymotion-s2)
+vmap , <Plug>(easymotion-s2)
 "" Comment out a line or block
 nmap # <Plug>NERDCommenterToggle
 xmap # <Plug>NERDCommenterToggle
