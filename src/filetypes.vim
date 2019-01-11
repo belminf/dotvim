@@ -59,6 +59,7 @@ augroup END
 " YAML formatting
 augroup ft_yaml
     autocmd!
+    autocmd BufNewFile,BufRead *.yaml.example set filetype=yaml
     autocmd FileType yaml set shiftwidth=2
     autocmd FileType yaml set softtabstop=2
 augroup END
