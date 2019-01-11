@@ -5,8 +5,8 @@ My Neovim configuration.
 ## Installing:
 OS requirements:
 
-* Arch: `yay -S neovim flake8 the_silver_searcher fzy ctags`
-* macOS: `brew install neovim flake8 the_silver_searcher fzy ctags`
+* Arch: `yay -S neovim flake8 the_silver_searcher fzy ctags prettier yamllint`
+* macOS: `brew install neovim flake8 the_silver_searcher fzy ctags prettier yamllint`
 
 ```
 # Clone
