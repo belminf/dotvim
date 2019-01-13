@@ -14,6 +14,8 @@ map <silent><F4> :set number!<CR>:sign unplace *<CR>:IndentLinesToggle<CR>
 map <silent> - :NERDTreeToggle<CR>
 "" Selection
 nmap ` <Plug>(wildfire-quick-select)
+"" Copy to system clipboard
+vmap Y "+y
 "" Motion
 nmap , <Plug>(easymotion-s2)
 vmap , <Plug>(easymotion-s2)
