@@ -28,6 +28,8 @@ nmap \ :Ack<Space>
 "" visual mode tab
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
+"" Ale fix
+map <silent>F :ALEFix<CR>
 
 "" Escape terminal
 if has('nvim')
