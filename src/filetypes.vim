@@ -115,3 +115,11 @@ augroup ft_shell
     autocmd FileType sh set shiftwidth=2
     autocmd FileType sh set softtabstop=2
 augroup END
+
+" makefiles
+augroup ft_makefile
+    autocmd!
+    autocmd FileType make set noexpandtab
+    autocmd FileType make set tabstop=4
+    autocmd FileType make set shiftwidth=4
+augroup END
