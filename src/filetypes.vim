@@ -112,8 +112,11 @@ augroup ft_shell
     " For terraform shell templates
     autocmd BufRead,BufNewFile *.sh.tpl set filetype=sh
 
-    autocmd FileType sh set shiftwidth=2
-    autocmd FileType sh set softtabstop=2
+    " Sticking to tabs
+    " Ref: https://github.com/mvdan/sh/commit/010f02fabe613e4ce1259b6f32bb4bbff5832dfb
+    autocmd FileType sh set noexpandtab
+    autocmd FileType sh set tabstop=4
+    autocmd FileType sh set shiftwidth=4
 augroup END
 
 " makefiles
