@@ -17,8 +17,8 @@ nmap ` <Plug>(wildfire-quick-select)
 "" Copy to system clipboard
 vmap Y "+y
 "" Motion
-nmap , <Plug>(easymotion-s2)
-vmap , <Plug>(easymotion-s2)
+nmap = <Plug>(easymotion-s2)
+vmap = <Plug>(easymotion-s2)
 "" Comment out a line or block
 nmap # <Plug>NERDCommenterToggle
 xmap # <Plug>NERDCommenterToggle
