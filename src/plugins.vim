@@ -22,6 +22,7 @@ Plug 'jiangmiao/auto-pairs'
 
 " indentLine: makes indent char visible
 Plug 'Yggdroot/indentLine'
+let g:indentLine_fileTypeExclude = ['json', 'markdown']
 
 " vim-airline: status bar
 "" Addresses issue with RHEL6 and 5
