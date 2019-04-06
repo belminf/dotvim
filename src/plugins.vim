@@ -97,6 +97,7 @@ Plug 'pearofducks/ansible-vim', { 'for': 'ansible' }
 " vim-go: Golang support
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 " Ref: https://github.com/laher/dotfiles/blob/master/vim/.vim/am/go.vim
+let g:go_version_warning = 0
 let g:go_fmt_command = "goimports"
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
