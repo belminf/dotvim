@@ -112,28 +112,6 @@ let g:go_fmt_experimental = 1
 
 let g:python3_host_skip_check = 1
 
-" nvim specific stuff
-if has('nvim')
-
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-    Plug 'zchee/deoplete-go', { 'do': 'make' }
-    Plug 'jodosha/vim-godebug'
-    Plug 'ervandew/supertab'
-    Plug 'Shougo/echodoc.vim'
-
-    set completeopt+=noselect
-    set completeopt+=noinsert
-    set completeopt-=preview
-    set noshowmode
-
-    let g:deoplete#enable_at_startup = 1
-    let g:python3_host_prog = '/usr/bin/python3'
-    let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
-    let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
-    autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
-
-endif
-
 " terraform
 Plug 'hashivim/vim-terraform'
 let g:terraform_align=1
