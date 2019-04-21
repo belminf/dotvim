@@ -57,10 +57,8 @@ let g:ale_fix_on_save = 0
 Plug 'ludovicchabant/vim-gutentags'
 
 " ack.vim for using ack in vim
-Plug 'mileszs/ack.vim'
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 " vim-easymotion: quickly move in doc
 Plug 'lokaltog/vim-easymotion'

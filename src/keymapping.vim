@@ -24,7 +24,7 @@ nmap # <Plug>NERDCommenterToggle
 xmap # <Plug>NERDCommenterToggle
 "" fuzzysearch
 cnoreabbrev Ack Ack!
-nmap \ :Ack<Space>
+nmap \ :Rg<Space>
 "" visual mode tab
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
