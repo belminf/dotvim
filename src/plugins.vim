@@ -74,8 +74,7 @@ autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 " gutentags - manages tags
 Plug 'ludovicchabant/vim-gutentags'
 
-" ack.vim for using ack in vim
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" fzf - fuzzy search, used for :Rg
 Plug 'junegunn/fzf.vim'
 
 " vim-easymotion: quickly move in doc

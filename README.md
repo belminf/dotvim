@@ -5,8 +5,8 @@ My Neovim configuration.
 ## Installing:
 OS requirements:
 
-* Arch: `yay -S neovim flake8 the_silver_searcher ctags prettier yamllint`
-* macOS: `brew install neovim flake8 the_silver_searcher ctags prettier yamllint`
+* Arch: `yay -S neovim flake8 the_silver_searcher ctags prettier yamllint fzf ripgrep`
+* macOS: `brew install neovim flake8 the_silver_searcher ctags prettier yamllint fzf ripgrep`
 
 ```
 # Clone
@@ -73,6 +73,6 @@ nvim +PlugUpdate
   * <kbd>CD</kbd>: Go back to CWD
 * <kbd>=</kbd>: Move using easymotion
 * <kbd>#</kbd>: Comment out line or block
-* <kbd>\\</kbd>: `Ag` search of current directory
+* <kbd>\\</kbd>: `Rg` search of current directory
 * <kbd>F3</kbd>: Clear highlighting
 * <kbd>F4</kbd>: Toggle line numbers
