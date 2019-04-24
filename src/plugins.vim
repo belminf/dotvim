@@ -75,6 +75,7 @@ autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 Plug 'ludovicchabant/vim-gutentags'
 
 " fzf - fuzzy search, used for :Rg
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " vim-easymotion: quickly move in doc
