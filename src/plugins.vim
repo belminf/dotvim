@@ -55,20 +55,20 @@ let g:ale_fix_on_save = 0
 
 " coc - autocomplete
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-" use <tab> for trigger completion and navigate to the next complete item
+"" Use tab to finish completion and go to next word
 function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
+  let char_before = col('.') - 1
+  return !char_before || getline('.')[char_before - 1]  =~ '\s'
 endfunction
-
-inoremap <silent><expr> <TAB>
+inoremap <silent><expr> <Tab>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()<Paste>
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+      \ coc#refresh()
+"" Navigate to the suggesetion before
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+"" Enter suggestion
+inoremap <expr> <Cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<Cr>"
+"" Close autocomplete dialog
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
 " gutentags - manages tags
