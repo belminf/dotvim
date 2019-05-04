@@ -32,6 +32,9 @@ set undofile
 " vim swap
 exec 'set' 'directory=' . s:path . '/../local/swap'
 
+" views
+exec 'set' 'viewdir=' . s:path . '/../local/views'
+
 " Buffer issues
 set hidden		" hide the buffer, don't close
 set title		" change the terminal's title
