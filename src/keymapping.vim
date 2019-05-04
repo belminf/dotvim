@@ -34,8 +34,13 @@ map <silent> - :NERDTreeToggle<CR>
 "" Copy to system clipboard
 vmap Y "+y
 "" Motion
-nmap = <Plug>(easymotion-s2)
-vmap = <Plug>(easymotion-s2)
+"" Navigate errors
+nmap = :lnext<CR>
+nmap <Shift> = :lprev<CR>
+
+nmap ; <Plug>(easymotion-s2)
+vmap ; <Plug>(easymotion-s2)
+
 "" Comment out a line or block
 nmap # <Plug>NERDCommenterToggle
 xmap # <Plug>NERDCommenterToggle
@@ -53,9 +58,9 @@ if has('nvim')
     tnoremap <Esc> <C-\><C-n>
 endif
 
-"" Go to next
-nmap <silent>{ :cb<CR>
-nmap <silent>} :cn<CR>
+"" Map page up and down
+nnoremap <silent> K <C-U>
+nnoremap <silent> J <C-D>
 
 function! Close()
   let cnt = 0
@@ -82,10 +87,6 @@ nmap <silent>q :call Close()<CR>
 " Disabled mappings
 "" Disable F1
 "nmap <silent> <F1> <Nop>
-"" Navigate errors
-"nmap <C-e> :lnext<CR>
-"nmap <C-E> :lprev<CR>
-"nmap <silent> <C-Tab> :lnext<CR>
 
 " Golang
 "au FileType go nmap <leader>b <Plug>(go-build)
