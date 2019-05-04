@@ -10,6 +10,7 @@ augroup ft_python
     autocmd!
     autocmd FileType python set cinwords=if,elif,else,for,while,try,except,finally,def,class
     autocmd BufWritePre *.py :%s/\s\+$//e
+    set foldmethod=indent
 augroup END
 
 " Puppet formatting
@@ -40,8 +41,6 @@ augroup ft_golang
     autocmd FileType go set shiftwidth=4
     autocmd FileType go set softtabstop=4
     autocmd FileType go set tabstop=4
-    autocmd FileType go set foldmethod=syntax
-    autocmd FileType go set foldnestmax=1
 augroup END
 
 " Markdown formatting
@@ -71,7 +70,6 @@ augroup ft_json
     autocmd FileType json set shiftwidth=2
     autocmd FileType json set softtabstop=2
 augroup END
-
 
 " rsnapshot config
 augroup ft_rsnapshot_conf
