@@ -79,7 +79,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " vim-easymotion: quickly move in doc
-Plug 'lokaltog/vim-easymotion'
+Plug 'easymotion/vim-easymotion'
 let g:EasyMotion_smartcase=1
 
 " vim-puppet: enhancements for puppet writing
@@ -140,6 +140,10 @@ Plug 'miyakogi/conoline.vim'
 let g:conoline_auto_enable = 1
 let g:conoline_use_colorscheme_default_normal = 1
 let g:conoline_use_colorscheme_default_insert = 1
+
+" incsearch: higlights searches
+Plug 'haya14busa/incsearch.vim'
+Plug 'haya14busa/incsearch-easymotion.vim'
 
 " Initialize plugin system
 call plug#end()

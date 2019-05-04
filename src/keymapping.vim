@@ -3,6 +3,25 @@ let mapleader=","
 "" Move buffers
 nmap <silent> <Tab><Tab> :bn<CR>
 nmap <silent> <S-Tab><S-Tab> :bp<CR>
+
+nnoremap ` zj
+
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+
+set hlsearch
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
+map z/ <Plug>(incsearch-easymotion-/)
+map z? <Plug>(incsearch-easymotion-?)
+map zg/ <Plug>(incsearch-easymotion-stay)
+
 "" CtrlP
 map <silent><Space> :CtrlP<CR>
 map <silent> _ :CtrlPTag<CR>
@@ -12,8 +31,6 @@ map <silent><F3> :nohl<CR>
 map <silent><F4> :set number!<CR>:sign unplace *<CR>:IndentLinesToggle<CR>
 "" Browse
 map <silent> - :NERDTreeToggle<CR>
-"" Selection
-nmap ` <Plug>(wildfire-quick-select)
 "" Copy to system clipboard
 vmap Y "+y
 "" Motion
