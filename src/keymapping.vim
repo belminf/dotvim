@@ -26,7 +26,7 @@ map zg/ <Plug>(incsearch-easymotion-stay)
 map <silent><Space> :CtrlP<CR>
 map <silent> _ :CtrlPTag<CR>
 "" Clear highlighting
-map <silent><F3> :nohl<CR>
+map <silent><F12> :source $MYVIMRC<CR>
 "" Toggle number
 map <silent><F4> :set number!<CR>:sign unplace *<CR>:IndentLinesToggle<CR>
 "" Browse
