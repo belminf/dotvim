@@ -58,6 +58,10 @@ if has('nvim')
     tnoremap <Esc> <C-\><C-n>
 endif
 
+"" Swap visual line and char mode
+nnoremap v V
+nnoremap V v
+
 "" Map page up and down
 nnoremap <silent> K <C-U>
 nnoremap <silent> J <C-D>
