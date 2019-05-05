@@ -53,7 +53,7 @@ autocmd! BufReadPost * :if line('$') > 75 | set foldlevel=0 | endif
 "" save folds
 augroup save_folds
   autocmd!
-  autocmd BufWinLeave * mkview
+  autocmd BufWinLeave * silent! mkview
   autocmd BufWinEnter * silent! loadview
 augroup END
 
