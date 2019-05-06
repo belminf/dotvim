@@ -59,7 +59,7 @@ brew tap wata727/tflint && brew install tflint
 Pull in plugin updates:
 
 ```
-nvim +PlugUpgrade +PlugUpdate +PlugClean
+nvim +PlugUpgrade +PlugClean +PlugUpdate
 ```
 
 ## Keys:
