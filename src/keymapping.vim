@@ -32,7 +32,9 @@ map <silent><F4> :set number!<CR>:sign unplace *<CR>:IndentLinesToggle<CR>
 "" Browse
 map <silent> - :NERDTreeToggle<CR>
 "" Copy to system clipboard
-vmap Y "+y
+nnoremap <C-y> :%y+<CR>
+vnoremap Y "+y
+
 "" Motion
 "" Navigate errors
 nmap = :lnext<CR>
