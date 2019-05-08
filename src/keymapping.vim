@@ -24,7 +24,10 @@ map zg/ <Plug>(incsearch-easymotion-stay)
 
 "" CtrlP
 map <silent><Space> :CtrlP<CR>
-map <silent> _ :CtrlPTag<CR>
+
+"" Tagbar
+map <silent> _ :TagbarOpenAutoClose<CR>
+
 "" Clear highlighting
 map <silent><F12> :source $MYVIMRC<CR>
 "" Toggle number

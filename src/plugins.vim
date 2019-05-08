@@ -145,5 +145,7 @@ let g:conoline_use_colorscheme_default_insert = 1
 Plug 'haya14busa/incsearch.vim'
 Plug 'haya14busa/incsearch-easymotion.vim'
 
+Plug 'majutsushi/tagbar'
+
 " Initialize plugin system
 call plug#end()
