@@ -54,7 +54,7 @@ let g:ale_sh_shfmt_options = '-s'
 let g:ale_fix_on_save = 0
 
 " coc - autocomplete
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 "" Use tab to finish completion and go to next word
 function! s:check_back_space() abort
   let char_before = col('.') - 1
