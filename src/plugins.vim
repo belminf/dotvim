@@ -51,6 +51,7 @@ let g:ale_fixers = {
 \   '*':        ['remove_trailing_lines', 'trim_whitespace'],
 \}
 let g:ale_sh_shfmt_options = '-s'
+let g:ale_sh_shellcheck_exclusions = 'SC1090'
 let g:ale_fix_on_save = 0
 
 " coc - autocomplete
