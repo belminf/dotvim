@@ -48,6 +48,7 @@ let g:ale_fixers = {
 \   'ruby':     ['rubocop'],
 \   'sh':       ['shfmt'],
 \   'yaml':     ['prettier'],
+\   'python':   ['black'],
 \   '*':        ['remove_trailing_lines', 'trim_whitespace'],
 \}
 let g:ale_sh_shfmt_options = '-s'
