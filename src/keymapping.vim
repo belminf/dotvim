@@ -43,15 +43,15 @@ vnoremap Y "+y
 nmap = :lnext<CR>
 nmap <Shift> = :lprev<CR>
 
-nmap ; <Plug>(easymotion-s2)
-vmap ; <Plug>(easymotion-s2)
+nmap \ <Plug>(easymotion-s2)
+vmap \ <Plug>(easymotion-s2)
 
 "" Comment out a line or block
 nmap # <Plug>NERDCommenterToggle
 xmap # <Plug>NERDCommenterToggle
 "" fuzzysearch
 cnoreabbrev Ack Ack!
-nmap \ :Rg<Space>
+nmap \| :Rg<Space>
 "" visual mode tab
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
