@@ -4,7 +4,7 @@ let mapleader=","
 nmap <silent> <Tab><Tab> :bn<CR>
 nmap <silent> <S-Tab><S-Tab> :bp<CR>
 
-nnoremap ` zj
+nnoremap <silent> ` :lnext<CR>
 
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
