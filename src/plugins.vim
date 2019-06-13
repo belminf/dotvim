@@ -133,7 +133,7 @@ let g:python3_host_skip_check = 1
 
 " terraform
 Plug 'hashivim/vim-terraform'
-let g:terraform_align=1
+let g:terraform_fmt_on_save=1
 
 Plug 'elzr/vim-json'
 let g:vim_json_syntax_conceal = 0

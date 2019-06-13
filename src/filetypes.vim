@@ -85,6 +85,7 @@ augroup ft_terraform
     autocmd!
     autocmd FileType terraform set shiftwidth=2
     autocmd FileType terraform set softtabstop=2
+    autocmd Filetype terraform nmap <silent> <buffer> F :ALEFix<CR>:TerraformFmt<CR>
 augroup END
 
 " ruby
