@@ -13,6 +13,11 @@ set t_Co=256
 set termencoding=utf-8
 set viewoptions=cursor,curdir,folds " limit what views save
 
+" Disable for security concerns
+" Ref: https://github.com/numirias/security/blob/master/doc/2019-06-04_ace-vim-neovim.md
+set modelines=0
+set nomodeline
+
 " Set color for regular vim
 if !has('nvim')
     set term=xterm-256color
