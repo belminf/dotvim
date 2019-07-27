@@ -43,6 +43,7 @@ let g:ale_sign_error = '⤫'
 let g:ale_sign_warning = '⚠'
 let g:airline#extensions#ale#enabled = 1
 let g:ale_fixers = {
+\   'go':       ['gofmt', 'goimports'],
 \   'php':      ['php_cs_fixer'],
 \   'json':     ['jq'],
 \   'ruby':     ['rubocop'],
@@ -56,7 +57,7 @@ let g:ale_sh_shellcheck_exclusions = 'SC1090,SC2016'
 let g:ale_fix_on_save = 0
 
 " coc - autocomplete
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 "" Use tab to finish completion and go to next word
 function! s:check_back_space() abort
   let char_before = col('.') - 1
@@ -125,7 +126,9 @@ let g:go_highlight_build_constraints = 1
 let g:go_term_mode = "split"
 let g:go_auto_type_info = 1
 let g:go_updatetime = 5000
-let g:go_info_mode = 'gocode'
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+let g:go_def_mapping_enabled = 0
 let g:go_auto_sameids = 1
 let g:go_fmt_experimental = 1
 
