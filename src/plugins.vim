@@ -48,9 +48,8 @@ let g:ale_fixers = {
 \   'json':     ['jq'],
 \   'ruby':     ['rubocop'],
 \   'sh':       ['shfmt'],
-\   'yaml':     ['prettier'],
 \   'python':   ['black'],
-\   '*':        ['remove_trailing_lines', 'trim_whitespace'],
+\   '*':        ['prettier', 'remove_trailing_lines', 'trim_whitespace'],
 \}
 let g:ale_sh_shfmt_options = '-s'
 let g:ale_sh_shellcheck_exclusions = 'SC1090,SC2016'
