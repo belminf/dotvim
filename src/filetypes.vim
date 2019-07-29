@@ -58,6 +58,7 @@ augroup END
 " YAML formatting
 augroup ft_yaml
     autocmd!
+    autocmd BufRead,BufNewFile *.yaml.gotmpl set filetype=yaml
     autocmd BufNewFile,BufRead *.yaml.example set filetype=yaml
     autocmd BufNewFile,BufRead *.yml set filetype=yaml
     autocmd FileType yaml set shiftwidth=2
