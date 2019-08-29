@@ -63,9 +63,13 @@ if has('nvim')
     tnoremap <Esc> <C-\><C-n>
 endif
 
-"" Map page up and down
-nnoremap <silent> K <C-U>
-nnoremap <silent> J <C-D>
+"" Prevent accidentally page up and down
+nmap <S-Up> k
+nmap <S-Down> j
+
+"" Maps a more natural page up and down
+nmap <C-K> <C-U>
+nmap <C-J> <C-D>
 
 function! Close()
   let cnt = 0
