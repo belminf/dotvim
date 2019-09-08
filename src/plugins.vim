@@ -72,6 +72,7 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <Cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<Cr>"
 "" Close autocomplete dialog
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+inoremap <silent><expr> <c-Tab> coc#refresh()
 
 " gutentags - manages tags
 Plug 'ludovicchabant/vim-gutentags'
@@ -114,24 +115,16 @@ Plug 'pearofducks/ansible-vim', { 'for': 'ansible' }
 
 " vim-go: Golang support
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-" Ref: https://github.com/laher/dotfiles/blob/master/vim/.vim/am/go.vim
-let g:go_version_warning = 0
 let g:go_fmt_command = "goimports"
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
+let g:go_highlight_string_spellcheck = 1
+let g:go_updatetime = 1000
 let g:go_term_mode = "split"
 let g:go_auto_type_info = 1
-let g:go_updatetime = 5000
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
-let g:go_def_mapping_enabled = 0
-let g:go_auto_sameids = 1
-let g:go_fmt_experimental = 1
+"let g:go_fmt_experimental = 1
+"let g:go_fmt_fail_silently = 1
 
-let g:python3_host_skip_check = 1
 
 " terraform
 Plug 'hashivim/vim-terraform'

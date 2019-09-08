@@ -114,9 +114,9 @@ endfunction
 "nmap <silent> <F1> <Nop>
 
 " Golang
-"au FileType go nmap <leader>b <Plug>(go-build)
-"au FileType go nmap <leader>t <Plug>(go-imports)<bar><Plug>(go-test)
-"au FileType go nmap <leader>c <Plug>(go-coverage)
-"au FileType go nmap @ <Plug>(go-def)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-imports)<Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+au FileType go nmap @ <Plug>(go-def)
 "au FileType go map <silent><F9> :write<CR>:GoImports<CR>:GoTest<CR>
 au FileType go nmap <silent>! :w<CR>:split <bar> terminal go run %<CR>
