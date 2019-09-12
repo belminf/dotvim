@@ -113,6 +113,9 @@ augroup ft_shell
     " For terraform shell templates
     autocmd BufRead,BufNewFile *.sh.tpl set filetype=sh
 
+    " For ERB templates
+    autocmd BufRead,BufNewFile *.sh.erb set filetype=sh
+
     " Should match shfmt in ale
     autocmd FileType sh set shiftwidth=2
     autocmd FileType sh set softtabstop=2
