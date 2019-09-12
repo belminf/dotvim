@@ -113,10 +113,9 @@ augroup ft_shell
     " For terraform shell templates
     autocmd BufRead,BufNewFile *.sh.tpl set filetype=sh
 
-    " TODO: Change shfmt to 4 spaces
-    " Ref: https://github.com/mvdan/sh/commit/010f02fabe613e4ce1259b6f32bb4bbff5832dfb
-    autocmd FileType sh set shiftwidth=4
-    autocmd FileType sh set softtabstop=4
+    " Should match shfmt in ale
+    autocmd FileType sh set shiftwidth=2
+    autocmd FileType sh set softtabstop=2
 augroup END
 
 " makefiles
