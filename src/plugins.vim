@@ -51,6 +51,9 @@ let g:ale_fixers = {
 \   'python':   ['black'],
 \   '*':        ['prettier', 'remove_trailing_lines', 'trim_whitespace'],
 \}
+let g:ale_linters = {
+\    'terraform': ['terraform'],
+\}
 let g:ale_sh_shfmt_options = '-s -i 2 -ci'
 let g:ale_sh_shellcheck_exclusions = 'SC1090,SC2016'
 let g:ale_fix_on_save = 0
