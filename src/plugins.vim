@@ -47,6 +47,7 @@ let g:ale_fixers = {
 \   'php':      ['php_cs_fixer'],
 \   'json':     ['jq'],
 \   'ruby':     ['rubocop'],
+\   'chef':     ['rubocop'],
 \   'sh':       ['shfmt'],
 \   'python':   ['black'],
 \   '*':        ['prettier', 'remove_trailing_lines', 'trim_whitespace'],
