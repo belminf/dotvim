@@ -128,3 +128,9 @@ augroup ft_makefile
     autocmd FileType make set tabstop=4
     autocmd FileType make set shiftwidth=4
 augroup END
+
+" sshconfig
+augroup ft_sshconfig
+    autocmd!
+    autocmd BufRead,BufNewFile */.ssh/config.d/* set filetype=sshconfig
+augroup END
