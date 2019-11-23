@@ -1,5 +1,4 @@
 set number              " always show current number
-set relativenumber      " display relative line numbers
 set ruler		" always show current position
 set showmatch		" set show matching parenthesis
 set smartcase		" ignore case if all lowercase
