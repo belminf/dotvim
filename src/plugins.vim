@@ -150,5 +150,8 @@ Plug 'haya14busa/incsearch-easymotion.vim'
 
 Plug 'majutsushi/tagbar'
 
+
+Plug 'tmux-plugins/vim-tmux'
+
 " Initialize plugin system
 call plug#end()
