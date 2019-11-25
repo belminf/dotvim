@@ -149,7 +149,7 @@ Plug 'haya14busa/incsearch.vim'
 Plug 'haya14busa/incsearch-easymotion.vim'
 
 Plug 'majutsushi/tagbar'
-
+let g:tagbar_autoclose = 1
 
 Plug 'tmux-plugins/vim-tmux'
 
