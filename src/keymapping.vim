@@ -43,8 +43,8 @@ vnoremap Y "+y
 nmap = :lnext<CR>
 nmap <Shift> = :lprev<CR>
 
-nmap \ <Plug>(easymotion-s2)
-vmap \ <Plug>(easymotion-s2)
+nmap ! <Plug>(easymotion-s2)
+vmap ! <Plug>(easymotion-s2)
 
 "" Comment out a line or block
 nmap # <Plug>NERDCommenterToggle
@@ -64,8 +64,10 @@ if has('nvim')
 endif
 
 "" Prevent accidentally page up and down
-nmap <S-Up> k
-nmap <S-Down> j
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
 
 "" Maps a more natural page up and down
 nmap <C-K> <C-U>
