@@ -1,4 +1,13 @@
 set number              " always show current number
+set relativenumber      " relative number
+
+" Disable relative number when not in focus
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
 set ruler		" always show current position
 set showmatch		" set show matching parenthesis
 set smartcase		" ignore case if all lowercase
