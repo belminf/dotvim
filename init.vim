@@ -12,8 +12,5 @@ exec 'source' s:path .  '/src/plugins.vim'
 " File types
 exec 'source' s:path .  '/src/filetypes.vim'
 
-" Colors
-exec 'source' s:path .  '/src/colors.vim'
-
 " Keymapping
 exec 'source' s:path . '/src/keymapping.vim'

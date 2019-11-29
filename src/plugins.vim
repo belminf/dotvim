@@ -153,5 +153,9 @@ let g:tagbar_autoclose = 1
 
 Plug 'tmux-plugins/vim-tmux'
 
+Plug 'morhetz/gruvbox'
+
 " Initialize plugin system
 call plug#end()
+
+colorscheme gruvbox
