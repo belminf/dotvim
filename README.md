@@ -13,7 +13,7 @@ OS requirements:
 git clone git@github.com:belminf/dotvim.git ~/.config/nvim
 
 # Install plugins
-nvim +PlugInstall
+nvim +PlugInstall +qall
 
 # For convenience
 ln -s ~/.config/nvim ~/.vim
@@ -59,7 +59,7 @@ brew tap wata727/tflint && brew install tflint
 Pull in plugin updates:
 
 ```
-nvim +PlugUpgrade +PlugClean +PlugUpdate
+nvim +PlugUpgrade +PlugClean +PlugInstall +PlugUpdate +qall
 ```
 
 ## Keys:
@@ -70,7 +70,7 @@ nvim +PlugUpgrade +PlugClean +PlugUpdate
 * <kbd>-</kbd>: Browse current directory (NERDTree)
   * <kbd>u</kbd>: Go up a directory (..)
   * <kbd>CD</kbd>: Go back to CWD
-* <kbd>=</kbd>: Move using easymotion
+* <kbd>!</kbd>: Move using easymotion
 * <kbd>#</kbd>: Comment out line or block
 * <kbd>\\</kbd>: `Rg` search of current directory
 * <kbd>F3</kbd>: Clear highlighting
