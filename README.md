@@ -5,7 +5,7 @@ My Neovim configuration.
 ## Installing:
 OS requirements:
 
-* Arch: `yay -S neovim flake8 the_silver_searcher ctags prettier yamllint fzf ripgrep shellcheck python-black`
+* Arch: `yay -S neovim flake8 the_silver_searcher ctags prettier yamllint fzf ripgrep shellcheck python-black terraform-lsp-bin bash-language-server dockerfile-language-server-bin`
 * macOS: `brew install neovim flake8 the_silver_searcher ctags prettier yamllint fzf ripgrep shellcheck black`
 
 ```
