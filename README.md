@@ -1,12 +1,34 @@
 # dotvim
 
-My Neovim configuration.
+My neovim configuration.
 
 ## Installing:
-OS requirements:
 
-* Arch: `yay -S neovim flake8 the_silver_searcher ctags prettier yamllint fzf ripgrep shellcheck python-black terraform-lsp-bin bash-language-server dockerfile-language-server-bin`
-* macOS: `brew install neovim flake8 the_silver_searcher ctags prettier yamllint fzf ripgrep shellcheck black`
+### OS requirements
+
+Arch:
+
+```
+yay -S neovim python-flake8 the_silver_searcher ctags prettier yamllint fzf ripgrep shellcheck python-black bash-language-server dockerfile-language-server-bin jsonlint tflint-bin terraform-lsp-bin
+
+gem install --user-install rufo
+```
+
+macOS
+
+```
+brew tap wata727/tflint
+brew install neovim flake8 the_silver_searcher ctags prettier yamllint fzf ripgrep shellcheck black jsonlint tflint
+
+npm i -g bash-language-server dockerfile-language-server-nodejs
+
+gem install --user-install rufo
+
+# Install TF LSP from https://github.com/juliosueiras/terraform-lsp/releases
+# e.g.: wget -qO- https://github.com/juliosueiras/terraform-lsp/releases/download/v0.0.9/terraform-lsp_0.0.9_darwin_amd64.tar.gz | tar xvz - -C ~/.local/bin/ terraform-lsp
+```
+
+### Install config
 
 ```
 # Clone
@@ -19,43 +41,8 @@ nvim +PlugInstall +qall
 ln -s ~/.config/nvim ~/.vim
 ```
 
-### Language specific:
-Using [ale](https://github.com/w0rp/ale) for linting. Prefer OS packages if available so that they're managed via system updates.
-
-#### Python
-```
-# Arch
-yay -S python-flake8
-
-# macOS
-brew install flake8
-
-```
-
-#### Ruby
-```
-gem install --user-install rufo
-```
-
-#### JSON
-```
-# Arch
-yay -S jsonlint
-
-# macOS
-brew install jsonlint
-```
-
-### Terraform
-```
-# Arch
-yay -S tflint-bin
-
-#macOS
-brew tap wata727/tflint && brew install tflint
-```
-
 ### Update:
+
 Pull in plugin updates:
 
 ```
@@ -63,15 +50,16 @@ nvim +PlugUpgrade +PlugClean +PlugInstall +PlugUpdate +qall
 ```
 
 ## Keys:
-* <kbd>Tab</kbd> <kbd>Tab</kbd>: Next buffer
-* <kbd>Shift</kbd> <kbd>Tab</kbd> <kbd>Tab</kbd>: Previous buffer
-* <kbd>q</kbd>: Delete current buffer
-* <kbd>Space</kbd>: Search recently opened files and current dir/project by filename (CtrlP)
-* <kbd>-</kbd>: Browse current directory (NERDTree)
-  * <kbd>u</kbd>: Go up a directory (..)
-  * <kbd>CD</kbd>: Go back to CWD
-* <kbd>!</kbd>: Move using easymotion
-* <kbd>#</kbd>: Comment out line or block
-* <kbd>\\</kbd>: `Rg` search of current directory
-* <kbd>F3</kbd>: Clear highlighting
-* <kbd>F4</kbd>: Toggle line numbers
+
+- <kbd>Tab</kbd> <kbd>Tab</kbd>: Next buffer
+- <kbd>Shift</kbd> <kbd>Tab</kbd> <kbd>Tab</kbd>: Previous buffer
+- <kbd>q</kbd>: Delete current buffer
+- <kbd>Space</kbd>: Search recently opened files and current dir/project by filename (CtrlP)
+- <kbd>-</kbd>: Browse current directory (NERDTree)
+  - <kbd>u</kbd>: Go up a directory (..)
+  - <kbd>CD</kbd>: Go back to CWD
+- <kbd>!</kbd>: Move using easymotion
+- <kbd>#</kbd>: Comment out line or block
+- <kbd>\\</kbd>: `Rg` search of current directory
+- <kbd>F3</kbd>: Clear highlighting
+- <kbd>F4</kbd>: Toggle line numbers
