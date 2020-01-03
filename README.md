@@ -58,7 +58,8 @@ nvim +PlugUpgrade +PlugClean +PlugInstall +PlugUpdate +qall
 - <kbd>-</kbd>: Browse current directory (NERDTree)
   - <kbd>u</kbd>: Go up a directory (..)
   - <kbd>CD</kbd>: Go back to CWD
-- <kbd>!</kbd>: Move using easymotion
+- <kbd>~</kbd>: Move using easymotion
+- <kbd>!</kbd>: Compile/run
 - <kbd>#</kbd>: Comment out line or block
 - <kbd>\\</kbd>: `Rg` search of current directory
 - <kbd>F3</kbd>: Clear highlighting
