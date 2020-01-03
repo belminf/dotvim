@@ -19,9 +19,6 @@
       ],
       "filetypes": [
         "sh"
-      ],
-      "ignoredRootPaths": [
-        "~"
       ]
     },
     "terraform": {
