@@ -22,7 +22,10 @@ brew install neovim flake8 the_silver_searcher ctags prettier yamllint fzf ripgr
 
 npm i -g bash-language-server dockerfile-language-server-nodejs
 
-gem install --user-install rufo
+brew install rbenv
+rbenv global 2.3.8
+sudo gem pristine jaro_winkler --version 1.5.2
+gem install --user rubocop
 
 # Install TF LSP from https://github.com/juliosueiras/terraform-lsp/releases
 # e.g.: wget -qO- https://github.com/juliosueiras/terraform-lsp/releases/download/v0.0.9/terraform-lsp_0.0.9_darwin_amd64.tar.gz | tar xvz - -C ~/.local/bin/ terraform-lsp
