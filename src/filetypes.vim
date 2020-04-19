@@ -106,6 +106,13 @@ augroup ft_chef
     autocmd FileType chef set softtabstop=2
 augroup END
 
+" gitconfig
+augroup ft_gitconfig
+    autocmd!
+    autocmd BufRead,BufNewFile */.config/git/config set filetype=gitconfig
+    autocmd BufRead,BufNewFile */.config/git/config.local set filetype=gitconfig
+augroup END
+
 " shell
 augroup ft_shell
     autocmd!
