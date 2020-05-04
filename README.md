@@ -9,7 +9,7 @@ My neovim configuration.
 Arch:
 
 ```
-yay -S neovim python-flake8 the_silver_searcher ctags prettier yamllint fzf ripgrep shellcheck python-black bash-language-server dockerfile-language-server-bin jsonlint tflint-bin terraform-lsp-bin
+yay -S neovim python-flake8 the_silver_searcher ctags prettier yamllint fzf ripgrep shellcheck python-black bash-language-server dockerfile-language-server-bin jsonlint tflint-bin terraform-lsp-bin shfmt
 
 gem install --user-install rufo
 ```
@@ -18,7 +18,7 @@ macOS
 
 ```
 brew tap wata727/tflint
-brew install neovim flake8 the_silver_searcher ctags prettier yamllint fzf ripgrep shellcheck black jsonlint tflint
+brew install neovim flake8 the_silver_searcher ctags prettier yamllint fzf ripgrep shellcheck black jsonlint tflint shfmt
 
 npm i -g bash-language-server dockerfile-language-server-nodejs
 
