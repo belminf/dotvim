@@ -2,3 +2,4 @@
 plugin/
 /tags
 /autoload/plug.vim.old
+/src/local.vim
