@@ -36,6 +36,9 @@ let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#bufferline#enabled=1
 let g:airline#extensions#tabline#buffer_nr_show=1
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#whitespace#skip_indent_check_ft = {
+\   'go': ['mixed-indent-file', 'indent'],
+\}
 
 " ale: syntax linter
 Plug 'w0rp/ale'
