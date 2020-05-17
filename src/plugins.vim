@@ -64,17 +64,17 @@ let g:ale_fix_on_save = 0
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 "" Use tab to finish completion and go to next word
 function! s:check_back_space() abort
-  let char_before = col('.') - 1
-  return !char_before || getline('.')[char_before - 1]  =~ '\s'
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-inoremap <silent><expr> <Tab>
+inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
 "" Navigate to the suggesetion before
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 "" Enter suggestion
-inoremap <expr> <Cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<Cr>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 "" Close autocomplete dialog
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 inoremap <silent><expr> <c-Tab> coc#refresh()
