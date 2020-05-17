@@ -49,7 +49,7 @@ ln -s ~/.config/nvim ~/.vim
 Pull in plugin updates:
 
 ```
-nvim +PlugUpgrade +PlugClean +PlugInstall +PlugUpdate +qall
+nvim +PlugUpgrade +PlugClean +PlugInstall +PlugUpdate +GoUpdateBinaries +qall
 ```
 
 ## Keys:
