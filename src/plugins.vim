@@ -121,9 +121,7 @@ Plug 'pearofducks/ansible-vim', { 'for': 'ansible' }
 " vim-go: Golang support
 "" Limit installation per vim-go requirements
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-let g:go_updatetime = 1000
 let g:go_term_mode = "split"
-let g:go_auto_type_info = 1
 
 " terraform
 Plug 'hashivim/vim-terraform'

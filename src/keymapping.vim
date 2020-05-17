@@ -34,7 +34,6 @@ let g:incsearch#auto_nohlsearch = 1
 map n  <Plug>(incsearch-nohl-n)
 map N  <Plug>(incsearch-nohl-N)
 map *  <Plug>(incsearch-nohl-*)
-map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
 map z/ <Plug>(incsearch-easymotion-/)
@@ -141,3 +140,4 @@ au FileType go nmap <leader>c <Plug>(go-coverage)
 au FileType go nmap @ <Plug>(go-def)
 "au FileType go map <silent><F9> :write<CR>:GoImports<CR>:GoTest<CR>
 au FileType go nmap <silent>! :w<CR>:split <bar> terminal go run %<CR>
+au FileType go nmap <silent>^ <Plug>(go-info)
