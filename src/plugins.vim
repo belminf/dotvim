@@ -61,7 +61,7 @@ let g:ale_sh_shellcheck_exclusions = 'SC1090,SC2016'
 let g:ale_fix_on_save = 0
 
 " coc - autocomplete
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "" Use tab to finish completion and go to next word
 function! s:check_back_space() abort
   let col = col('.') - 1
