@@ -56,7 +56,8 @@ let g:ale_fixers = {
 \   '*':        ['prettier', 'remove_trailing_lines', 'trim_whitespace'],
 \}
 let g:ale_linters = {
-\    'terraform': ['terraform'],
+\   'go':        ['golangci-lint'],
+\   'terraform': ['terraform'],
 \}
 let g:ale_chef_cookstyle_options = '--except ChefStyle/FileMode'
 let g:ale_sh_shfmt_options = '-s -i 2 -ci'
