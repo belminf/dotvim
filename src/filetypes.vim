@@ -134,6 +134,7 @@ augroup ft_makefile
     autocmd FileType make set noexpandtab
     autocmd FileType make set tabstop=4
     autocmd FileType make set shiftwidth=4
+    autocmd FileType make let b:tagbar_ignore = 1
 augroup END
 
 " sshconfig
