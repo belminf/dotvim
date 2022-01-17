@@ -52,6 +52,7 @@ let g:ale_fixers = {
 \   'ruby':     ['rubocop'],
 \   'chef':     ['rubocop'],
 \   'sh':       ['shfmt'],
+\   'zsh':      ['shfmt'],
 \   'python':   ['black'],
 \   '*':        ['prettier', 'remove_trailing_lines', 'trim_whitespace'],
 \}

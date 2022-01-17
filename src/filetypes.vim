@@ -128,6 +128,13 @@ augroup ft_shell
     autocmd FileType sh set softtabstop=2
 augroup END
 
+" zsh
+augroup ft_zsh
+    autocmd!
+    autocmd FileType zsh set shiftwidth=2
+    autocmd FileType zsh set softtabstop=2
+augroup END
+
 " makefiles
 augroup ft_makefile
     autocmd!
