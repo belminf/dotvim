@@ -10,15 +10,6 @@
         "go"
       ]
     },
-    "bash": {
-      "command": "bash-language-server",
-      "args": [
-        "start"
-      ],
-      "filetypes": [
-        "sh"
-      ]
-    },
     "terraform": {
       "command": "terraform-lsp",
       "filetypes": [

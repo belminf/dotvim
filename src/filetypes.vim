@@ -102,6 +102,7 @@ augroup ft_chef
     autocmd!
     autocmd BufRead,BufNewFile */cookbooks/*.rb set filetype=chef | set syntax=ruby.chef
     autocmd BufRead,BufNewFile */recipes/*.rb set filetype=chef | set syntax=ruby.chef
+    autocmd BufRead,BufNewFile */attributes/*.rb set filetype=chef | set syntax=ruby.chef
     autocmd FileType chef set shiftwidth=2
     autocmd FileType chef set softtabstop=2
 augroup END
@@ -113,6 +114,13 @@ augroup ft_gitconfig
     autocmd BufRead,BufNewFile */.config/git/config.local set filetype=gitconfig
 augroup END
 
+" groovy
+augroup ft_groovy
+    autocmd!
+    autocmd BufRead,BufNewFile */Jenkinsfile set filetype=groovy
+    autocmd BufRead,BufNewFile */Jenkinsfile.* set filetype=groovy
+augroup END
+
 " shell
 augroup ft_shell
     autocmd!
@@ -122,6 +130,9 @@ augroup ft_shell
 
     " For ERB templates
     autocmd BufRead,BufNewFile *.sh.erb set filetype=sh
+
+    " For zsh
+    autocmd BufRead,BufNewFile *.zsh set filetype=sh
 
     " Should match shfmt in ale
     autocmd FileType sh set shiftwidth=2
