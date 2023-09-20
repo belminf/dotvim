@@ -41,7 +41,7 @@ let g:airline#extensions#whitespace#skip_indent_check_ft = {
 \}
 
 " ale: syntax linter
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 let g:ale_sign_error = '⤫'
 let g:ale_sign_warning = '⚠'
 let g:airline#extensions#ale#enabled = 1
@@ -64,6 +64,7 @@ let g:ale_chef_cookstyle_options = '--except ChefStyle/FileMode'
 let g:ale_sh_shfmt_options = '-s -i 2 -ci'
 let g:ale_sh_shellcheck_exclusions = 'SC1090,SC2016'
 let g:ale_fix_on_save = 0
+let g:ale_virtualtext_cursor = 'disabled'
 
 " coc - autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}

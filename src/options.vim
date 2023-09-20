@@ -15,6 +15,9 @@ set termencoding=utf-8
 set viewoptions=cursor,curdir,folds " limit what views save
 set viewoptions-=options            " remove CWD, ref: https://vim.fandom.com/wiki/Make_views_automatic
 
+" Disable mouse usage cause it's annoying
+set mouse=
+
 " Disable for security concerns
 " Ref: https://github.com/numirias/security/blob/master/doc/2019-06-04_ace-vim-neovim.md
 set modelines=0
