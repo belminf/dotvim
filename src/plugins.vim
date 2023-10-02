@@ -80,7 +80,8 @@ inoremap <silent><expr> <TAB>
 "" Navigate to the suggesetion before
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 "" Enter suggestion
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+
 "" Close autocomplete dialog
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 inoremap <silent><expr> <c-Tab> coc#refresh()
