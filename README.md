@@ -1,69 +1,26 @@
 # dotvim
 
-My neovim configuration.
+My Neovim configuration. Leveraging [LazyVim](https://www.lazyvim.org/). Dependencies:
 
-## Installing:
+- Nerd Font
+- Neovim >= 0.9
 
-### OS requirements
+## Keys
 
-Arch:
-
-```
-yay -S neovim python-flake8 the_silver_searcher ctags prettier yamllint fzf ripgrep shellcheck python-black bash-language-server dockerfile-language-server-bin jsonlint tflint-bin terraform-lsp-bin shfmt golangci-lint-bin
-
-gem install --user-install rufo
-```
-
-macOS
-
-```
-brew tap wata727/tflint
-brew install neovim flake8 the_silver_searcher ctags prettier yamllint fzf ripgrep shellcheck black jsonlint tflint shfmt golangci/tap/golangci-lint
-
-npm i -g bash-language-server dockerfile-language-server-nodejs
-
-brew install rbenv
-rbenv global 2.3.8
-sudo gem pristine jaro_winkler --version 1.5.2
-gem install --user-install cookstyle foodcritic rubocop
-
-# Install TF LSP from https://github.com/juliosueiras/terraform-lsp/releases
-# e.g.: wget -qO- https://github.com/juliosueiras/terraform-lsp/releases/download/v0.0.9/terraform-lsp_0.0.9_darwin_amd64.tar.gz | tar xvz - -C ~/.local/bin/ terraform-lsp
-```
-
-### Install config
-
-```
-# Clone
-git clone git@github.com:belminf/dotvim.git ~/.config/nvim
-
-# Install plugins
-nvim +PlugInstall +qall
-
-# For convenience
-ln -s ~/.config/nvim ~/.vim
-```
-
-### Update:
-
-Pull in plugin updates:
-
-```
-nvim +PlugUpgrade +PlugClean +PlugInstall +PlugUpdate +GoUpdateBinaries +qall
-```
-
-## Keys:
+See [LazyVim keymap](https://www.lazyvim.org/keymaps) for reference.
+Could also use <kbd>Space</kbd> <kbd>?</kbd> to search all keys
 
 - <kbd>Tab</kbd> <kbd>Tab</kbd>: Next buffer
 - <kbd>Shift</kbd> <kbd>Tab</kbd> <kbd>Tab</kbd>: Previous buffer
 - <kbd>q</kbd>: Delete current buffer
-- <kbd>Space</kbd>: Search recently opened files and current dir/project by filename (CtrlP)
-- <kbd>-</kbd>: Browse current directory (NERDTree)
-  - <kbd>u</kbd>: Go up a directory (..)
-  - <kbd>CD</kbd>: Go back to CWD
-- <kbd>~</kbd>: Move using easymotion
-- <kbd>!</kbd>: Compile/run
-- <kbd>#</kbd>: Comment out line or block
-- <kbd>\\</kbd>: `Rg` search of current directory
-- <kbd>F3</kbd>: Clear highlighting
-- <kbd>F4</kbd>: Toggle line numbers
+- <kbd>Space</kbd> <kbd>Space</kbd>: Search root directory
+- <kbd>s</kbd>: Move to a letter using easy motion
+- <kbd>S</kbd>: Select a tree element (e.g., paragraph)
+
+### Update
+
+Update plugins
+
+```bash
+nvim --headless "+Lazy! sync" +qa
+```
