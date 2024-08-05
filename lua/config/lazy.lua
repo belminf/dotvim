@@ -34,7 +34,7 @@ require("lazy").setup({
 		lazy = false,
 		version = false, -- always use the latest git commit
 	},
-	install = { colorscheme = { "catppuccin-mocha" } },
+	install = {},
 	checker = {
 		enabled = true, -- check for plugin updates periodically
 		notify = true, -- notify on update
