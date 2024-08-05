@@ -14,8 +14,11 @@ let g:loaded_netrw       = 1
 let g:loaded_netrwPlugin = 1
 
 " Nerdcommenter: quick commenting
-Plug 'scrooloose/nerdcommenter'
+Plug 'preservim/nerdcommenter'
 let NERDCreateDefaultMappings=0
+let g:NERDCustomDelimiters = {
+    \ 'chef': { 'left': '#'  },
+\ }
 
 " vim-autopairs: highlight close tags
 Plug 'jiangmiao/auto-pairs'
@@ -23,6 +26,9 @@ Plug 'jiangmiao/auto-pairs'
 " indentLine: makes indent char visible
 Plug 'Yggdroot/indentLine'
 let g:indentLine_fileTypeExclude = ['json', 'markdown']
+
+" groovy.vim: For groovy indentation
+Plug 'modille/groovy.vim'
 
 " vim-airline: status bar
 "" Addresses issue with RHEL6 and 5
@@ -45,21 +51,27 @@ Plug 'dense-analysis/ale'
 let g:ale_sign_error = '⤫'
 let g:ale_sign_warning = '⚠'
 let g:airline#extensions#ale#enabled = 1
+
+" For ref: https://github.com/dense-analysis/ale/tree/master/doc
 let g:ale_fixers = {
-\   'go':       ['gofmt', 'goimports'],
-\   'php':      ['php_cs_fixer'],
-\   'json':     ['jq'],
-\   'ruby':     ['rubocop'],
-\   'chef':     ['rubocop'],
-\   'sh':       ['shfmt'],
-\   'zsh':      ['shfmt'],
-\   'python':   ['black'],
 \   '*':        ['prettier', 'remove_trailing_lines', 'trim_whitespace'],
+\   'chef':     ['rubocop'],
+\   'go':       ['gofmt', 'goimports'],
+\   'groovy':   ['npm-groovy-lint'],
+\   'json':     ['jq'],
+\   'packer':   ['packer'],
+\   'php':      ['php_cs_fixer'],
+\   'python':   ['black'],
+\   'ruby':     ['rubocop'],
+\   'sh':       ['shfmt'],
+\   'hcl;':     ['terraform'],
+\   'zsh':      ['shfmt'],
 \}
-let g:ale_linters = {
-\   'go':        ['golangci-lint'],
-\   'terraform': ['terraform'],
-\}
+"let g:ale_linters = {
+"\   'go':        ['golangci-lint'],
+"\   'terraform': ['terraform'],
+"\   'packer':    ['packer-fmt'],
+"\}
 let g:ale_chef_cookstyle_options = '--except ChefStyle/FileMode'
 let g:ale_sh_shfmt_options = '-s -i 2 -ci'
 let g:ale_sh_shellcheck_exclusions = 'SC1090,SC2016'
@@ -154,6 +166,8 @@ let g:tagbar_autoclose = 1
 Plug 'tmux-plugins/vim-tmux'
 
 Plug 'morhetz/gruvbox'
+
+Plug 'jvirtanen/vim-hcl'
 
 " Initialize plugin system
 call plug#end()

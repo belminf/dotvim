@@ -89,6 +89,14 @@ augroup ft_terraform
     autocmd Filetype terraform nmap <silent> <buffer> F :ALEFix<CR>:TerraformFmt<CR>
 augroup END
 
+" packer
+augroup ft_packer
+    autocmd!
+    autocmd BufNewFile,BufRead *.pkr.hcl set filetype=packer | set syntax=hcl
+    autocmd FileType packer set shiftwidth=2
+    autocmd FileType packer set softtabstop=2
+augroup END
+
 " ruby
 augroup ft_ruby
     autocmd!
@@ -119,6 +127,8 @@ augroup ft_groovy
     autocmd!
     autocmd BufRead,BufNewFile */Jenkinsfile set filetype=groovy
     autocmd BufRead,BufNewFile */Jenkinsfile.* set filetype=groovy
+    autocmd FileType groovy set shiftwidth=4
+    autocmd FileType groovy set softtabstop=4
 augroup END
 
 " shell
