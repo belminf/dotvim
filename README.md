@@ -7,8 +7,7 @@ My Neovim configuration. Leveraging [LazyVim](https://www.lazyvim.org/). Depende
 
 ## Keys
 
-See [LazyVim keymap](https://www.lazyvim.org/keymaps) for reference.
-Could also use <kbd>Space</kbd> <kbd>?</kbd> to search all keys
+Use <kbd>Space</kbd> <kbd>?</kbd> to search mappings. See [LazyVim keymap](https://www.lazyvim.org/keymaps) for reference.
 
 - <kbd>Tab</kbd> <kbd>Tab</kbd>: Next buffer
 - <kbd>Shift</kbd> <kbd>Tab</kbd> <kbd>Tab</kbd>: Previous buffer
