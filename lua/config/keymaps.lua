@@ -29,3 +29,7 @@ vim.keymap.set("v", "<S-Tab>", "<gv", { desc = "Unindent text" })
 vim.keymap.set({ "n", "v" }, "F", function()
 	LazyVim.format({ force = true })
 end, { desc = "Format" })
+
+vim.keymap.set("n", "<Esc>", function()
+	require("noice").cmd("dismiss")
+end, { desc = "Dismiss all notifications" })

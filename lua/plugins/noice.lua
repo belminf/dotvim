@@ -6,13 +6,6 @@ return {
 	},
 	keys = {
 		{
-			"`",
-			function()
-				require("noice").cmd("dismiss")
-			end,
-			{ desc = "Dimiss all notifications" },
-		},
-		{
 			"<Leader>`",
 			function()
 				require("noice").cmd("history")
