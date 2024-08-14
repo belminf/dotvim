@@ -1,4 +1,4 @@
-vim.o.updatetime = 500
+vim.o.updatetime = 300
 vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
 	group = vim.api.nvim_create_augroup("float_diagnostic", {}),
 	callback = function()
