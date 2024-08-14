@@ -19,6 +19,9 @@ vim.keymap.set("n", "q", function()
 	end
 end, { desc = "Close buffer and window" })
 
+vim.keymap.set("n", "<C-y>", ":%y+<CR>", { silent = true, desc = "Copy entire buffer to system clipboard" })
+vim.keymap.set("v", "Y", '"+y', { silent = true, desc = "Copy selection to system clipboard" })
+
 vim.keymap.set("n", "<Tab><Tab>", "<cmd>bn<CR>", { noremap = true, silent = true, desc = "Switch to next tab" })
 vim.keymap.set("n", "<S-Tab><S-Tab>", "<cmd>bp<CR>", { noremap = true, silent = true, desc = "Switch to previous tab" })
 vim.keymap.set("n", ">", vim.diagnostic.goto_next, { desc = "Focus on next diagnostic" })
