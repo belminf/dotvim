@@ -3,6 +3,9 @@ return {
 		"nvim-lualine/lualine.nvim",
 		opts = function(_, opts)
 			local icons = LazyVim.config.icons
+			opts.options.theme = "OceanicNext"
+			opts.options.component_separators = { left = "|", right = "|" }
+			opts.options.section_separators = { left = "", right = "" }
 			opts.sections.lualine_c = {
 				LazyVim.lualine.root_dir(),
 				{
@@ -17,7 +20,29 @@ return {
 				{ LazyVim.lualine.pretty_path() },
 			}
 			opts.sections.lualine_x = {
-				{ "filetype", icon_only = false, separator = "", padding = { left = 1, right = 0 } },
+				{ "filetype", icon_only = false, separator = "|", padding = { left = 1, right = 1 } },
+				{
+					function()
+						return require("noice").api.status.command.get()
+					end,
+					cond = function()
+						return package.loaded["noice"] and require("noice").api.status.command.has()
+					end,
+					color = function()
+						return LazyVim.ui.fg("Statement")
+					end,
+				},
+				{
+					function()
+						return require("noice").api.status.mode.get()
+					end,
+					cond = function()
+						return package.loaded["noice"] and require("noice").api.status.mode.has()
+					end,
+					color = function()
+						return LazyVim.ui.fg("Constant")
+					end,
+				},
 				{
 					"diff",
 					symbols = {
@@ -36,6 +61,10 @@ return {
 						end
 					end,
 				},
+			}
+			opts.sections.lualine_y = {
+				{ "progress", separator = " 󰄿", padding = { left = 1, right = 0 } },
+				{ "location", padding = { left = 0, right = 0 } },
 			}
 			opts.sections.lualine_z = {
 				{
