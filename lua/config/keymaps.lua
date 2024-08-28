@@ -36,3 +36,12 @@ end, { desc = "Format" })
 vim.keymap.set("n", "<Esc>", function()
 	require("noice").cmd("dismiss")
 end, { desc = "Dismiss all notifications" })
+
+-- Remove lazygit
+vim.keymap.del("n", "<leader>gg")
+vim.keymap.del("n", "<leader>gG")
+vim.keymap.del("n", "<leader>gb")
+vim.keymap.del("n", "<leader>gB")
+vim.keymap.del("n", "<leader>gf")
+vim.keymap.del("n", "<leader>gl")
+vim.keymap.del("n", "<leader>gL")
