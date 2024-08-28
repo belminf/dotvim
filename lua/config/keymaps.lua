@@ -1,5 +1,5 @@
 vim.keymap.set("n", "-", function()
-	require("neo-tree.command").execute({ toggle = true, reveal = true, reveal_force_cwd = true })
+	require("neo-tree.command").execute({ toggle = true, reveal = true, dir = LazyVim.root() })
 end, { noremap = true, silent = true, desc = "Browse root directory" })
 
 vim.keymap.set("n", "q", function()
