@@ -1,6 +1,7 @@
 vim.opt.mouse = ""
 vim.g.autoformat = false
 vim.opt.clipboard = ""
+vim.wo.relativenumber = false
 
 -- paths
 vim.opt.undodir = vim.fn.stdpath("config") .. "/local/undo"
