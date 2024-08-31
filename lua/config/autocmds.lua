@@ -10,7 +10,7 @@ vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
 
 SHOW_DEFINITION_TOGGLE = false
 vim.keymap.set("n", "`", function()
-  vim.cmd 'OutlineClose'
+  vim.cmd 'AerialCloseAll'
 	SHOW_DEFINITION_TOGGLE = not SHOW_DEFINITION_TOGGLE
 	if SHOW_DEFINITION_TOGGLE then
 		vim.diagnostic.open_float(nil, { focus = false })

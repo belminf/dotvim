@@ -28,7 +28,10 @@ require("lazy").setup({
 		{ import = "lazyvim.plugins.extras.lang.ruby" },
 		{ import = "lazyvim.plugins.extras.formatting.prettier" },
 		{ import = "lazyvim.plugins.extras.formatting.black" },
-		{ import = "lazyvim.plugins.extras.editor.outline" },
+		{ import = "lazyvim.plugins.extras.editor.aerial" },
+		{ import = "lazyvim.plugins.extras.editor.dial" },
+		{ import = "lazyvim.plugins.extras.ui.treesitter-context" },
+		{ import = "lazyvim.plugins.extras.editor.refactoring" },
 		{ import = "plugins" },
 	},
 	defaults = {
