@@ -28,6 +28,7 @@ require("lazy").setup({
 		{ import = "lazyvim.plugins.extras.lang.ruby" },
 		{ import = "lazyvim.plugins.extras.formatting.prettier" },
 		{ import = "lazyvim.plugins.extras.formatting.black" },
+		{ import = "lazyvim.plugins.extras.editor.outline" },
 		{ import = "plugins" },
 	},
 	defaults = {
