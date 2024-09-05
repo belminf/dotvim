@@ -14,6 +14,9 @@ Use <kbd>Space</kbd> <kbd>?</kbd> to search mappings. See [LazyVim keymap](https
 - <kbd>q</kbd>: Delete current buffer
 - <kbd>Ctl</kbd> <kbd>h/j/k/l</kbd>: Window movement
 
+- <kbd>o</kbd>: Move to other side of selection
+- <kbd>%</kbd>: Move to matching parenthesis
+
 - <kbd>Space</kbd> <kbd>Space</kbd>: Search root directory (telescope)
 - <kbd>Space</kbd> <kbd>/</kbd>: Search directory (telescope)
 - <kbd>Ctl</kbd> <kbd>/</kbd>: Open terminal (telescope)

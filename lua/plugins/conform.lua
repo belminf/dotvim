@@ -14,6 +14,7 @@ return {
 				lua = { "stylua" },
 				fish = { "fish_indent" },
 				sh = { "shfmt" },
+				go = { "goimports", "gofumpt" },
 				["*"] = { "trim_whitespace", "trim_newlines" },
 			},
 			-- The options you set here will be merged with the builtin formatters.
