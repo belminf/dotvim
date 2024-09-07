@@ -15,6 +15,9 @@ return {
 				fish = { "fish_indent" },
 				sh = { "shfmt" },
 				go = { "goimports", "gofumpt" },
+				terraform = { "terraform_fmt" },
+				tf = { "terraform_fmt" },
+				["terraform-vars"] = { "terraform_fmt" },
 				["*"] = { "trim_whitespace", "trim_newlines" },
 			},
 			-- The options you set here will be merged with the builtin formatters.
