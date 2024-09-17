@@ -1,4 +1,4 @@
-vim.opt.mouse = "ichr"
+vim.opt.mouse = "chr"
 vim.g.autoformat = false
 vim.opt.clipboard = ""
 vim.wo.relativenumber = false
