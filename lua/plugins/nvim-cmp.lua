@@ -9,10 +9,13 @@ return {
 		end
 
 		local cmp = require("cmp")
+		opts.preselect = cmp.PreselectMode.None
+		opts.completion = { completeopt = "menu,menuone,noselect,noinsert" }
 		opts.mapping = vim.tbl_extend("force", opts.mapping, {
+			["<CR>"] = cmp.config.disable,
 			["<Tab>"] = cmp.mapping(function(fallback)
 				if cmp.visible() then
-					cmp.confirm({ select = true })
+					cmp.select_next_item()
 				elseif vim.snippet.active({ direction = 1 }) then
 					vim.schedule(function()
 						vim.snippet.jump(1)
