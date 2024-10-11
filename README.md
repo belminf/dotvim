@@ -13,6 +13,7 @@ Use <kbd>Space</kbd> <kbd>?</kbd> to search mappings. See [LazyVim keymap](https
 - <kbd>Shift</kbd> <kbd>Tab</kbd> <kbd>Tab</kbd>: Previous buffer
 - <kbd>q</kbd>: Delete current buffer
 - <kbd>Ctl</kbd> <kbd>h/j/k/l</kbd>: Window movement
+- <kbd>Ctl</kbd> <kbd>q</kbd>: Blockwise visual select
 
 - <kbd>o</kbd>: Move to other side of selection
 - <kbd>%</kbd>: Move to matching parenthesis
