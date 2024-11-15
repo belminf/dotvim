@@ -2,6 +2,9 @@ vim.opt.mouse = "chr"
 vim.g.autoformat = false
 vim.opt.clipboard = ""
 vim.wo.relativenumber = false
+vim.opt.listchars:append {
+  tab = ".┈"
+}
 
 -- paths
 vim.opt.undodir = vim.fn.stdpath("config") .. "/local/undo"
