@@ -3,7 +3,7 @@ vim.g.autoformat = false
 vim.opt.clipboard = ""
 vim.wo.relativenumber = false
 vim.opt.listchars:append {
-  tab = ".┈"
+  tab = "."
 }
 
 -- paths
