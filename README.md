@@ -36,7 +36,7 @@ Use <kbd>Space</kbd> <kbd>?</kbd> to search mappings. See [LazyVim keymap](https
 Update plugins
 
 ```bash
-nvim --headless "+Lazy! sync" +qa
+make update
 ```
 
 ## References
