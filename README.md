@@ -5,6 +5,12 @@ My Neovim configuration. Leveraging [LazyVim](https://www.lazyvim.org/). Depende
 - Nerd Font
 - Neovim >= 0.9
 
+### Update
+
+```bash
+make update
+```
+
 ## Keys
 
 Use <kbd>Space</kbd> <kbd>?</kbd> to search mappings. See [LazyVim keymap](https://www.lazyvim.org/keymaps) for reference.
@@ -30,14 +36,6 @@ Use <kbd>Space</kbd> <kbd>?</kbd> to search mappings. See [LazyVim keymap](https
 - <kbd>Space</kbd><kbd>t</kbd>: Run test (neotest)
 
 - <kbd>Space</kbd> <kbd>`</kbd>: Show all notices (noice)
-
-### Update
-
-Update plugins
-
-```bash
-make update
-```
 
 ## References
 
