@@ -21,7 +21,7 @@ Use <kbd>Space</kbd> <kbd>?</kbd> to search mappings. See [LazyVim keymap](https
 - <kbd>Ctl</kbd> <kbd>h/j/k/l</kbd>: Window movement
 - <kbd>Ctl</kbd> <kbd>q</kbd>: Blockwise visual select
 
-- <kbd>o</kbd>: Move to other side of selection
+- <kbd>o</kbd>: Move to other side of selection in visual mode
 - <kbd>%</kbd>: Move to matching parenthesis
 
 - <kbd>Space</kbd> <kbd>Space</kbd>: Search root directory (telescope)
@@ -30,7 +30,7 @@ Use <kbd>Space</kbd> <kbd>?</kbd> to search mappings. See [LazyVim keymap](https
 
 - <kbd>s</kbd>: Move to a letter (flash)
 - <kbd>S</kbd>: Select a tree element (flash)
-- <kbd>g</kbd> <kbd>s</kbd> <kbd>r</kbd>: Replace surrounding symbols (mini.surround)
+- <kbd>g</kbd> <kbd>s</kbd> <kbd>r</kbd><kbd>\[Char\]</Char></kbd>: Replace surrounding char (mini.surround)
 - <kbd>K</kbd>: Show method signature in visual mode (LSP)
 - <kbd>Ctl</kbd> <kbd>k</kbd>: Show method signature in insert mode (LSP)
 - <kbd>Space</kbd><kbd>t</kbd>: Run test (neotest)
