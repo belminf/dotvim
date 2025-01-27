@@ -1,5 +1,8 @@
+init:
+	nvim -c "TSInstallSync maintained" -c q
+
 update:
 	nvim --headless "+Lazy! sync" +qa
-	nvim --headless +TSUpdate +qa
+	nvim -c "TSUpdateSync" -c q
 
 .PHONY: update
