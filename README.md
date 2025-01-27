@@ -24,9 +24,11 @@ Use <kbd>Space</kbd> <kbd>?</kbd> to search mappings. See [LazyVim keymap](https
 - <kbd>o</kbd>: Move to other side of selection in visual mode
 - <kbd>%</kbd>: Move to matching parenthesis
 
-- <kbd>Space</kbd> <kbd>Space</kbd>: Search root directory (telescope)
-- <kbd>Space</kbd> <kbd>/</kbd>: Search directory (telescope)
-- <kbd>Ctl</kbd> <kbd>/</kbd>: Open terminal (telescope)
+- <kbd>Space</kbd> <kbd>s</kbd><kbd>s</kbd>: Search symbols (e.g., functions)(fzf)
+- <kbd>Space</kbd> <kbd>Space</kbd>: Search root directory (fzf)
+- <kbd>Space</kbd> <kbd>/</kbd>: Search directory (fzf)
+- <kbd>Space</kbd> <kbd>:</kbd>: Search command history (fzf)
+- <kbd>Ctl</kbd> <kbd>/</kbd>: Open terminal (snacks)
 
 - <kbd>s</kbd>: Move to a letter (flash)
 - <kbd>S</kbd>: Select a tree element (flash)
