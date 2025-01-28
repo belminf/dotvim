@@ -32,7 +32,7 @@ Use <kbd>Space</kbd> <kbd>?</kbd> to search mappings. See [LazyVim keymap](https
 
 - <kbd>s</kbd>: Move to a letter (flash)
 - <kbd>S</kbd>: Select a tree element (flash)
-- <kbd>g</kbd> <kbd>s</kbd> <kbd>r</kbd><kbd>\[Char\]</Char></kbd>: Replace surrounding char (mini.surround)
+- <kbd>c</kbd> <kbd>s</kbd> <kbd>\[Char\]</Char></kbd>: Replace surrounding char (mini.surround)
 - <kbd>K</kbd>: Show method signature in visual mode (LSP)
 - <kbd>Ctl</kbd> <kbd>k</kbd>: Show method signature in insert mode (LSP)
 - <kbd>Space</kbd><kbd>t</kbd>: Run test (neotest)
