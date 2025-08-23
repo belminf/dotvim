@@ -5,6 +5,24 @@ My Neovim configuration. Leveraging [LazyVim](https://www.lazyvim.org/). Depende
 - Nerd Font
 - Neovim >= 0.9
 
+## Requirements
+
+For Archlinux:
+```
+yay -S \
+  wget \
+  zip \
+  npm \
+  gpls \
+  luarocks\
+  vscode-json-languageserver /
+  yaml-language-server /
+  bash-language-server \
+  ruby-sorbet-runtime \
+  marksman \
+  markdownlint-cli2
+```
+
 ### Update
 
 ```bash
