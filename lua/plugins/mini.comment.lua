@@ -1,5 +1,5 @@
 return {
-	"echasnovski/mini.comment",
+	"nvim-mini/mini.comment",
 	opts = {
 		mappings = {
 			comment = "#",
