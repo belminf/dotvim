@@ -152,7 +152,7 @@ Use <kbd>Space</kbd> <kbd>?</kbd> to search all keymaps. See [LazyVim keymap](ht
 
 ### Other
 
-- <kbd>Ctl</kbd> <kbd>g</kbd>: Toggle Claude Code
+- <kbd>Ctl</kbd> <kbd>g</kbd>: Toggle Claude Code panel (works in normal, insert, and terminal mode)
 - <kbd>Ctl</kbd> <kbd>/</kbd>: Open terminal
 - <kbd>Esc</kbd>: Dismiss notifications + clear search highlights
 
