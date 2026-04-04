@@ -1,9 +1,6 @@
 # dotvim
 
-My Neovim configuration. Leveraging [LazyVim](https://www.lazyvim.org/). Dependencies:
-
-- Nerd Font
-- Neovim >= 0.9
+My Neovim configuration. Leveraging [LazyVim](https://www.lazyvim.org/).
 
 ## Requirements
 
@@ -15,47 +12,37 @@ brew install \
   fzf \
   git \
   go \
-  jsonlint \
-  lua \
-  luajit \
   neovim \
   node \
   npm \
   python3 \
   ripgrep \
   ruby \
-  shellcheck \
-  shfmt \
-  stylua \
-  terraform \
-  tree-sitter \
-  yamllint
+  terraform
 ```
 
 ### Arch Linux
 
 ```bash
 yay -S \
-  bash-language-server \
+  fd \
+  fzf \
   go \
-  gopls \
-  luarocks \
-  markdownlint-cli2 \
-  marksman \
+  neovim \
   nodejs \
   npm \
   python \
+  ripgrep \
   ruby \
-  ruby-sorbet-runtime \
-  shellcheck \
-  shfmt \
-  stylua \
   terraform \
-  vscode-json-languageserver \
   wget \
-  yaml-language-server \
-  yamllint \
   zip
+```
+
+### Setup
+
+```bash
+make init
 ```
 
 ### Update
@@ -64,51 +51,132 @@ yay -S \
 make update
 ```
 
+### Mason
+
+LSP servers and tools are managed by [Mason](https://github.com/mason-org/mason.nvim) with version-locked installs via [mason-lock.nvim](https://github.com/zapling/mason-lock.nvim).
+
+To restore pinned tools:
+
+```bash
+make restore
+```
+
+- `:Mason` — browse/install packages
+- `:MasonLock` — save current versions to `mason-lock.json`
+- `:MasonLockRestore` — install exact versions from lockfile
+
 ## Keys
 
-Use <kbd>Space</kbd> <kbd>?</kbd> to search mappings. See [LazyVim keymap](https://www.lazyvim.org/keymaps) for reference.
+Use <kbd>Space</kbd> <kbd>?</kbd> to search all keymaps. See [LazyVim keymap](https://www.lazyvim.org/keymaps) for full reference.
 
 ### Buffers
-- <kbd>Tab</kbd> <kbd>Tab</kbd>: Next buffer
-- <kbd>Shift</kbd> <kbd>Tab</kbd> <kbd>Tab</kbd>: Previous buffer
-- <kbd>q</kbd>: Delete current buffer (quit if last buffer)
+
+- <kbd>Shift</kbd> <kbd>l</kbd> / <kbd>]b</kbd>: Next buffer
+- <kbd>Shift</kbd> <kbd>h</kbd> / <kbd>[b</kbd>: Previous buffer
+- <kbd>#</kbd>: Browse open buffers (fzf, most recently used)
+- <kbd>Space</kbd> <kbd>b</kbd><kbd>d</kbd>: Delete buffer
+- <kbd>Space</kbd> <kbd>q</kbd><kbd>q</kbd>: Quit all
 
 ### Windows
+
 - <kbd>Ctl</kbd> <kbd>h/j/k/l</kbd>: Window movement
-- <kbd>Ctl</kbd> <kbd>q</kbd>: Blockwise visual select
-- <kbd>o</kbd>: Move to other side of selection in visual mode
-- <kbd>%</kbd>: Move to matching parenthesis
+- <kbd>Ctl</kbd> <kbd>q</kbd>: Toggle terminal insert mode
 
 ### Navigation
-- <kbd>-</kbd>: Browse root directory (neo-tree)
-- <kbd>Space</kbd> <kbd>s</kbd><kbd>s</kbd>: Search symbols (e.g., functions)(fzf)
-- <kbd>Space</kbd> <kbd>Space</kbd>: Search root directory (fzf)
-- <kbd>Space</kbd> <kbd>/</kbd>: Search directory (fzf)
-- <kbd>Space</kbd> <kbd>:</kbd>: Search command history (fzf)
 
-### Text
-- <kbd>s</kbd>: Move to a letter (flash)
-- <kbd>S</kbd>: Select a tree element (flash)
-- <kbd>c</kbd> <kbd>s</kbd> <kbd>[Char]</kbd>: Replace surrounding char (mini.surround)
-- <kbd>F</kbd>: Format code
-- <kbd>Tab</kbd>: Indent text (visual mode)
-- <kbd>Shift</kbd> <kbd>Tab</kbd>: Unindent text (visual mode)
-- <kbd>Ctl</kbd> <kbd>y</kbd>: Copy entire buffer to system clipboard
-- <kbd>Y</kbd>: Copy selection to system clipboard (visual mode)
+- <kbd>-</kbd>: Browse files (vertical popup)
+- <kbd>Space</kbd> <kbd>e</kbd>: Browse root directory (sidebar)
+- <kbd>Space</kbd> <kbd>Space</kbd>: Find files
+- <kbd>Space</kbd> <kbd>/</kbd>: Live grep across project (ripgrep + fzf)
+- <kbd>\_</kbd>: Browse symbols in current file (scrollable tree + preview)
+- <kbd>&</kbd>: Fuzzy search symbols across workspace (LSP)
 
-### Coding
-- <kbd>K</kbd>: Show method signature in visual mode (LSP)
-- <kbd>Ctl</kbd> <kbd>k</kbd>: Show method signature in insert mode (LSP)
-- <kbd>&gt;</kbd>: Go to next diagnostic
-- <kbd>&lt;</kbd>: Go to previous diagnostic
-- <kbd>Ctl</kbd> <kbd>h</kbd>: Next git hunk (or diff change in diff mode)
-- <kbd>Space</kbd><kbd>t</kbd>: Run test (neotest)
+### Editing
+
+- <kbd>s</kbd>: Jump to letter (flash)
+- <kbd>S</kbd>: Select treesitter node (flash) — highlights syntax blocks like functions, conditions, loops; type a label to jump/select
+- <kbd>g</kbd> <kbd>s</kbd> <kbd>r</kbd>: Replace surrounding
+- <kbd>g</kbd> <kbd>s</kbd> <kbd>a</kbd> / <kbd>g</kbd> <kbd>s</kbd> <kbd>d</kbd>: Add / delete surrounding
+- <kbd>&gt;</kbd> / <kbd>&lt;</kbd> (visual): Indent / unindent
+- <kbd>g</kbd> <kbd>c</kbd> <kbd>c</kbd> / <kbd>g</kbd> <kbd>c</kbd> (visual): Comment
+- <kbd>F</kbd>: Format
+- <kbd>Ctl</kbd> <kbd>y</kbd>: Copy buffer to clipboard
+- <kbd>Y</kbd> (visual): Copy selection to clipboard
+- <kbd>%</kbd>: Jump to matching bracket / paren / brace
+- <kbd>q</kbd><kbd>a</kbd>: Record macro into register `a` (stop with <kbd>q</kbd>); <kbd>@</kbd><kbd>a</kbd> to replay, <kbd>@</kbd><kbd>@</kbd> to repeat last
+
+### Completion
+
+- <kbd>Ctl</kbd> <kbd>Space</kbd>: Manually trigger / toggle docs
+- <kbd>Tab</kbd> / <kbd>Shift</kbd> <kbd>Tab</kbd>: Navigate list
+- <kbd>Enter</kbd>: Confirm selection
+- <kbd>Ctl</kbd> <kbd>e</kbd>: Cancel
+- <kbd>Ctl</kbd> <kbd>b</kbd> / <kbd>Ctl</kbd> <kbd>f</kbd>: Scroll docs
+
+### LSP
+
+- <kbd>K</kbd>: Hover docs for symbol under cursor
+- <kbd>g</kbd><kbd>K</kbd>: Signature help — shows function parameter list (like the tooltip when you type `(`)
+- <kbd>g</kbd><kbd>d</kbd>: Go to definition
+- <kbd>g</kbd><kbd>I</kbd>: Go to implementation
+- <kbd>g</kbd><kbd>y</kbd>: Go to type definition
+- <kbd>g</kbd><kbd>r</kbd>: References
+- <kbd>`</kbd>: Toggle floating diagnostics
+- <kbd>]d</kbd> / <kbd>[d</kbd>: Next / previous diagnostic
+
+### Refactoring
+
+<kbd>Space</kbd> <kbd>c</kbd> is the code action prefix — hit it and which-key shows everything available. Key ones:
+
+- <kbd>Space</kbd> <kbd>c</kbd><kbd>r</kbd>: **Rename symbol** (F2 in VSCode / GoLand)
+- <kbd>Space</kbd> <kbd>c</kbd><kbd>a</kbd>: **Code action / quick fix** (Ctrl+. in VSCode) — extract variable, organize imports, fix errors
+- <kbd>Space</kbd> <kbd>c</kbd><kbd>f</kbd>: **Format file**
+- <kbd>Space</kbd> <kbd>c</kbd><kbd>R</kbd>: **Rename file** (updates LSP references too)
+- <kbd>Space</kbd> <kbd>u</kbd><kbd>h</kbd>: Toggle inlay hints (inline type annotations in the code)
+
+<kbd>Space</kbd> <kbd>s</kbd> is the search prefix. Useful ones beyond files:
+
+- <kbd>Space</kbd> <kbd>s</kbd><kbd>S</kbd>: Symbols across workspace (same as <kbd>&</kbd>)
+
+### Git
+
+- <kbd>]h</kbd> / <kbd>[h</kbd>: Next / previous hunk
+- <kbd>Space</kbd> <kbd>g</kbd><kbd>h</kbd><kbd>s</kbd>: Stage hunk
+- <kbd>Space</kbd> <kbd>g</kbd><kbd>h</kbd><kbd>r</kbd>: Reset hunk
+- <kbd>Space</kbd> <kbd>g</kbd><kbd>b</kbd>: Blame line
+
+### Testing
+
+- <kbd>Space</kbd> <kbd>t</kbd><kbd>r</kbd>: Run nearest test
+- <kbd>Space</kbd> <kbd>t</kbd><kbd>f</kbd>: Run file tests
+
+### Other
+
 - <kbd>Ctl</kbd> <kbd>g</kbd>: Toggle Claude Code
-- <kbd>Ctl</kbd> <kbd>/</kbd>: Open terminal (snacks)
+- <kbd>Ctl</kbd> <kbd>/</kbd>: Open terminal
+- <kbd>Esc</kbd>: Dismiss notifications + clear search highlights
 
-### Notifications
-- <kbd>Space</kbd> <kbd>`</kbd>: Show all notices (noice)
-- <kbd>Esc</kbd>: Dismiss all notifications
+## Transition
+
+| Was                                  | Now                         |
+| ------------------------------------ | --------------------------- |
+| `q`                                  | `<leader>bd` / `<leader>qq` |
+| `<Tab><Tab>` / `<S-Tab><S-Tab>`      | `<S-l>` / `<S-h>`           |
+| `>` / `<` (normal, diagnostics)      | `]d` / `[d`                 |
+| `<C-h>` (git hunk, broke window nav) | `]h`                        |
+| `<Tab>` / `<S-Tab>` (visual indent)  | `>` / `<`                   |
+| `<Esc>` (dismiss notifs, broke noh)  | `<Esc>` does both now       |
+| `<C-t>` (todo search)                | `<leader>sT`                |
+| `#` (comment)                        | `gcc` / `gc`                |
+| `#` (search backward)                | `*` then `N`                |
+| `cs` (surround replace)              | `gsr`                       |
+
+## When stuck
+
+- <kbd>Space</kbd> <kbd>?</kbd>: Search all keymaps (fzf)
+- <kbd>Space</kbd> <kbd>s</kbd><kbd>C</kbd>: Search commands (fzf)
+- <kbd>Space</kbd> <kbd>:</kbd>: Search command history (fzf)
+- [LazyVim keymaps reference](https://www.lazyvim.org/keymaps)
 
 ## References
 

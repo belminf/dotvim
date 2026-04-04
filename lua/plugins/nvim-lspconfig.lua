@@ -16,13 +16,3 @@ return {
 		},
 	},
 }
--- config = function()
--- 	require("lspconfig").terraformls.setup({
--- 		settings = {
--- 			experimentalFeatures = {
--- 				validateOnSave = false,
--- 			},
--- 		},
--- 	})
--- end,
--- }
