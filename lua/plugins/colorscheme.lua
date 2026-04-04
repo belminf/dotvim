@@ -1,13 +1,15 @@
 return {
-	{
-		"neanias/everforest-nvim",
-		priority = 1000, -- Make sure this loads first
-		lazy = false, -- Load this on startup
-	},
-	{
-		"LazyVim/LazyVim",
-		opts = {
-			colorscheme = "everforest",
-		},
-	},
+  {
+    "rebelot/kanagawa.nvim",
+    name = "kanagawa",
+    priority = 1000,
+    lazy = false,
+  },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      -- Options: "kanagawa", "kanagawa-wave", "kanagawa-dragon", "kanagawa-lotus"
+      colorscheme = "kanagawa",
+    },
+  },
 }
