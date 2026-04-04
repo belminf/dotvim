@@ -23,7 +23,13 @@ vim.keymap.set("n", "<leader>?", "<cmd>FzfLua keymaps<cr>", { desc = "Search Key
 vim.keymap.set("n", "-", function()
 	Snacks.picker.explorer({ layout = { preset = "vertical", preview = false }, jump = { close = true } })
 end, { desc = "Explorer" })
-vim.keymap.set("n", "#", "<cmd>FzfLua buffers sort_mru=true sort_lastused=true<cr>", { desc = "Switch Buffer" })
+vim.keymap.set({ "n", "t" }, "<C-g>", function()
+	require("claude-code").toggle()
+end, { desc = "Toggle Claude Code" })
+
+vim.keymap.set("n", "<leader><Tab>", function()
+	Snacks.picker.buffers({ focus = "list", layout = { preset = "dropdown", preview = false } })
+end, { desc = "Switch Buffer" })
 
 vim.keymap.set("n", "_", function()
 	Snacks.picker.lsp_symbols({ layout = { preset = "vertical", hidden = { "input" } } })

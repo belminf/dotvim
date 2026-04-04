@@ -73,7 +73,7 @@ Use <kbd>Space</kbd> <kbd>?</kbd> to search all keymaps. See [LazyVim keymap](ht
 
 - <kbd>Shift</kbd> <kbd>l</kbd> / <kbd>]b</kbd>: Next buffer
 - <kbd>Shift</kbd> <kbd>h</kbd> / <kbd>[b</kbd>: Previous buffer
-- <kbd>#</kbd>: Browse open buffers (fzf, most recently used)
+- <kbd>Space</kbd> <kbd>Tab</kbd>: Browse open buffers (dropdown picker, j/k to navigate, type to filter)
 - <kbd>Space</kbd> <kbd>b</kbd><kbd>d</kbd>: Delete buffer
 - <kbd>Space</kbd> <kbd>q</kbd><kbd>q</kbd>: Quit all
 
