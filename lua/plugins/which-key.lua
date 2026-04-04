@@ -1,9 +1,12 @@
 return {
 	"folke/which-key.nvim",
-	keys = {
-		{
-			"<leader>?",
-			false,
+	opts = {
+		win = {
+			col = 0.5,
+			row = 0.5,
 		},
+	},
+	keys = {
+		{ "<leader>?", false },
 	},
 }

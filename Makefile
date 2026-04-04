@@ -1,8 +1,13 @@
 init:
-	nvim -c "TSInstallSync maintained" -c q
+	nvim --headless "+Lazy! sync" +qa
+	nvim --headless "+TSInstallSync all" +qa
+	nvim --headless "+MasonLockRestore" +qa
 
 update:
 	nvim --headless "+Lazy! sync" +qa
-	nvim -c "TSUpdateSync" -c q
+	nvim --headless "+TSUpdateSync" +qa
 
-.PHONY: update
+restore:
+	nvim --headless "+MasonLockRestore" +qa
+
+.PHONY: init update restore
