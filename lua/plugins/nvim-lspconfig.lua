@@ -7,6 +7,7 @@ return {
 			bashls = {
 				filetypes = { "sh", "zsh" },
 			},
+			pylsp = {},
 		},
 		diagnostics = {
 			virtual_text = false,

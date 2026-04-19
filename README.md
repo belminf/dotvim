@@ -2,47 +2,12 @@
 
 My Neovim configuration. Leveraging [LazyVim](https://www.lazyvim.org/).
 
-## Requirements
-
-### macOS
-
-```bash
-brew install \
-  fd \
-  fzf \
-  git \
-  go \
-  neovim \
-  node \
-  npm \
-  python3 \
-  ripgrep \
-  ruby \
-  terraform
-```
-
-### Arch Linux
-
-```bash
-yay -S \
-  fd \
-  fzf \
-  go \
-  neovim \
-  nodejs \
-  npm \
-  python \
-  ripgrep \
-  ruby \
-  terraform \
-  wget \
-  zip
-```
+## Install
 
 ### Setup
 
 ```bash
-make init
+make setup
 ```
 
 ### Update
