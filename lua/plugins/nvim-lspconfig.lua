@@ -6,8 +6,14 @@ return {
 		servers = {
 			bashls = {
 				filetypes = { "sh", "zsh" },
+				mason = false,
 			},
 			pylsp = {},
+			pyright = { mason = false },
+			jsonls = { mason = false },
+			ansiblels = { mason = false },
+			yamlls = { mason = false },
+			biome = { mason = false },
 		},
 		diagnostics = {
 			virtual_text = false,
